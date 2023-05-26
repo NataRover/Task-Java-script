@@ -1,4 +1,5 @@
-// У нас есть следующий объект:
+// ЗАДАНИЕ 1
+//У нас есть следующий объект:
 //Проверьте, что этот объект не пустой и что в нем есть ключ age.
 var user = {
     name: "John",
@@ -31,6 +32,7 @@ console.log(Object.hasOwn(user, "age"));
 //5//
 console.log(Object.keys(user) && "age" in user);
 //true//
+// ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
 var obj = [
@@ -90,6 +92,7 @@ myArray.forEach(function (element, index, array) {
     console.log(index); // 0, 1, 2
     console.log(array); // same myArray object 3 times
 });
+// ЗАДАНИЕ 3
 // Удалите из массива объектов (задание 2) объект с name == "Anna".
 //1//
 var obj_2 = obj.filter(function (elem) { return elem.name !== "Anna"; });
@@ -98,10 +101,12 @@ console.log(obj_2);
 var index = obj.findIndex(function (item) { return item.name === "Anna"; });
 obj.splice(index, 1);
 console.log(obj);
+// ЗАДАНИЕ 4
 // Отсортируйте массив объектов в пункте 2 по свойству age в порядке возрастания.
 //1//
 obj.sort(function (a, b) { return a.age - b.age; });
 console.log(obj);
+// ЗАДАНИЕ 5
 //Получите из объекта obj значение id и разместите его в константу userId.
 var obj_3 = {
     id: 5,
@@ -110,6 +115,7 @@ var obj_3 = {
 //1//
 var userId = obj_3.id;
 console.log(userId);
+// ЗАДАНИЕ 6
 //Получите список свойств объекта
 var student = {
     name: "David Ray",
@@ -120,9 +126,11 @@ var student = {
 for (var el in student) {
     console.log(el);
 }
+// ЗАДАНИЕ 7
 //удаления свойства rollno из следующего объекта.
 delete student.rollno;
 console.log(student);
+// ЗАДАНИЕ 8
 //Получить длину объекта student.
 //1//
 var objsize = Object.keys(student).length;
@@ -130,3 +138,43 @@ console.log(objsize);
 //2//
 var objsize2 = Object.getOwnPropertyNames(student).length;
 console.log(objsize2);
+// ЗАДАНИЕ 9
+//Напишите программу на JavaScript для отображения статуса
+//чтения (то есть отображения названия книги, имени автора и статуса чтения) следующих книг.
+var library = [
+    {
+        title: "Bill Gates",
+        author: "The Road Ahead",
+        readingStatus: true
+    },
+    {
+        title: "Steve Jobs",
+        author: "Walter Isaacson",
+        readingStatus: false
+    },
+    {
+        title: "Mockingjay: The Final Book of The Hunger Games",
+        author: "Suzanne Collins",
+        readingStatus: false
+    },
+    {
+        title: "Blood diamond",
+        author: "Эдвард Цвик",
+        readingStatus: true
+    },
+    {
+        title: "Mandalorian",
+        author: "Джон Фавро",
+        readingStatus: true
+    },
+];
+for (var index_1 = 0; index_1 < library.length; index_1++) {
+    var element = library[index_1];
+    var book = "'" + element.title + "'" + " " + element.author + "-";
+    if (element.readingStatus) {
+        console.log(book + " \u043A\u043D\u0438\u0433\u0430 \u043F\u0440\u043E\u0447te\u043D\u0430");
+    }
+    else {
+        console.log(book + " \u043A\u043D\u0438\u0433\u0443 \u043D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0447\u0435\u0441\u0442\u044C");
+    }
+}
