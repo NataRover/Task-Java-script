@@ -128,17 +128,17 @@ console.log(userId);
 
 const student = {
   name: "David Ray",
-  sclass: "VI",
-  rollno: 12,
+  class: "VI",
+  age: 16,
 };
 //1//
 for (let el in student) {
   console.log(el);
 }
 // ЗАДАНИЕ 7
-//удаления свойства rollno из следующего объекта.
+//удаления свойства age из следующего объекта.
 
-delete student.rollno;
+delete student.age;
 console.log(student);
 
 // ЗАДАНИЕ 8
@@ -180,7 +180,7 @@ const library = [
     readingStatus: true,
   },
 ];
-
+//1//
 for (let index = 0; index < library.length; index++) {
   const element = library[index];
   const book = "'" + element.title + "'" + " " + element.author + "-";
@@ -190,8 +190,28 @@ for (let index = 0; index < library.length; index++) {
     console.log(`${book} книгу нужно прочесть`);
   }
 }
+
 // ЗАДАНИЕ 10
-//Напишите программу на JavaScript, чтобы получить объем цилиндра
-//с четырьмя десятичными разрядами, используя классы объектов.
-// Объем баллона : V = πr 2 ч
-// где r - радиус, а h - высота цилиндра.
+//Смысл задачи: если значение объекта является числом (number),
+//то его значение надо увеличить вдвое.
+const menu = {
+  width: 200,
+  height: 300,
+  title: "my menu",
+};
+//1//
+for (let value of Object.values(menu)) {
+  if (typeof value == "number") {
+    value = value * 2;
+    console.log(value);
+  }
+}
+//2//
+for (let elem in menu) {
+  if (typeof menu[elem] == "number") {
+    menu[elem] *= 2;
+  }
+}
+console.log(menu);
+//3//
+

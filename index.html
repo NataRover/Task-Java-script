@@ -206,10 +206,10 @@
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
             <p class="m-0">const student = { <br>
                 name : "David Ray", <br>
-                sclass : "VI", <br>
-                rollno : 12 };</p>
+                class : "VI", <br>
+                age : 16 };</p>
         </div>
-        <p class="my-3">Получите список свойств объекта. Пример вывода : name, sclass, rollno</p>
+        <p class="my-3">Получите список свойств объекта. Пример вывода : name, class, age</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample6">
             <div class="accordion-item">
@@ -330,13 +330,16 @@
         </div>
 
         <h3 class="mt-5">Задание 10</h3>
-        <!-- <p>Дан массив объектов</p> -->
+        <p>Дан объект</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-            Объем цилиндра : V = πr 2 h<br>
-            , где r — радиус, а h — высота цилиндра.
+            const menu = {<br>
+            width: 200, <br>
+            height: 300,<br>
+            title: "my menu"<br>
+            };
         </div>
-        <p class="my-3">Напишите скрипт, чтобы получить объем цилиндра с четырьмя десятичными
-            разрядами, используя классы объектов.</p>
+        <p class="my-3">Напишите скрипт,если значение объекта является числом (number), то его значение надо увеличить
+            вдвое..</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample10">
             <div class="accordion-item">
@@ -349,6 +352,13 @@
                 <div id="collapseOne10" class="accordion-collapse collapse" data-bs-parent="#accordionExample10">
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p><br>
+                        for (let elem in menu) {<br>
+                        if (typeof menu[elem] == "number") {<br>
+                        menu[elem] *= 2;<br>
+                        }<br>
+                        }<br>
+                        console.log(menu);<br><br>
+                        <p class="bg-warning d-inline">2.</p><br>
                     </div>
                 </div>
             </div>
@@ -357,7 +367,7 @@
         <h3 class="mt-5">Задание 11</h3>
         <!-- <p>Дан массив объектов</p> -->
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-         
+
         </div>
         <p class="my-3"></p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
@@ -379,7 +389,7 @@
         <h3 class="mt-5">Задание 12</h3>
         <!-- <p>Дан массив объектов</p> -->
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-         
+
         </div>
         <p class="my-3"></p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
@@ -401,7 +411,7 @@
         <h3 class="mt-5">Задание 13</h3>
         <!-- <p>Дан массив объектов</p> -->
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-         
+
         </div>
         <p class="my-3"></p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
