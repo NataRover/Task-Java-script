@@ -32,6 +32,17 @@ console.log(Object.hasOwn(user, "age"));
 //5//
 console.log(Object.keys(user) && "age" in user);
 //true//
+//6//
+//проверка на пустой объект
+function isEmpty(user) {
+    for (var key in user) {
+        // если тело цикла начнет выполняться - значит в объекте есть свойства
+        return false;
+    }
+    return true;
+}
+console.log(isEmpty(user));
+
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
@@ -203,3 +214,84 @@ for (var elem in menu) {
 }
 console.log(menu);
 //3//
+//ЗАДАЧА 11//
+// 1. Есть три объекта (три автомобиля): first_Car, second_Car и third_Car.
+// 2. Каждый из объектов (автомобилей) имеет набор свойств и соответствующих им значений (характеристики автомобиля).
+// 3. Рассмотрим один из объектов:
+// var first_Car = {
+// make: "VAZ", /* производитель */
+// model: 2106, /* модель */
+// year: 1980, /* год выпуска */
+// color: "beige", /* цвет */
+// passengers: 5, /* число пассажиров */
+// convertible: false, /* откидной верх */
+// mileage: 80000 /* пробег */
+// }
+// - свойства make и color имеют строковые значения;
+// - свойства model, year, passengers и mileage - числовые значения;
+// - свойство convertible принимает булево значение.
+// Нужно сделать следующее:
+// Написать функцию, которая проверяет автомобиль по двум параметрам (год выпуска и пробег)
+// и возвращает булево значение true или false.
+// Подробности:
+// 1. Функция имеет один параметр car, в качестве которого получает один из 3-х объектов.
+//Например, выше рассмотренный автомобиль first_Car.
+// 2. Функция должна работать с любым подобным объектом.
+//1//
+/* 1-ый объект */
+var first_Car = {
+    make: "VAZ" /* производитель */,
+    model: 2106 /* модель */,
+    year: 1980 /* год выпуска */,
+    color: "beige" /* цвет */,
+    passengers: 5 /* число пассажиров */,
+    convertible: false /* откидной верх */,
+    mileage: 80000 /* пробег */
+};
+/* 2-ой объект */
+var second_Car = {
+    make: "VW",
+    model: "Passat b3",
+    year: 1990,
+    color: "neptune",
+    passengers: 5,
+    convertible: false,
+    mileage: 160000
+};
+/* 3-ий объект */
+var third_Car = {
+    make: "Hyundai",
+    model: "Solaris",
+    year: 2012,
+    color: "wet asphalt",
+    passengers: 5,
+    convertible: false,
+    mileage: 15000
+};
+/* Функция для проверки объекта */
+function good_Car(car) {
+    if (car.year < 2000) {
+        return false;
+    }
+    else if (car.mileage > 50000) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+/* Заносим результат работы функции good_Car и Анализ результата в еще одну функцию */
+function itog(car) {
+    var result = good_Car(car);
+    if (result) {
+        console.log("У Вас неплохой автомобиль: " +
+            car.year +
+            " год выпуска, с пробегом " +
+            car.mileage +
+            " км.");
+    }
+    else {
+        console.log("Не будем говорить о Вашем автомобиле....");
+    }
+}
+console.log(itog(second_Car));

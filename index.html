@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https:cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,7 +31,7 @@
                 age: 30<br>
                 };</p>
         </div>
-        <p class="my-3">Проверьте, что этот объект не пустой и что в нем есть ключ age.</p>
+        <p class="my-3 bg-warning-subtle p-3">Проверьте, что этот объект не пустой и что в нем есть ключ age.</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample1">
             <div class="accordion-item">
@@ -60,7 +60,17 @@
                         console.log("объект пустой");<br>
                         } else {<br>
                         console.log(user.age);<br>
-                        }
+                        }<br><br>
+                        <p class="bg-warning d-inline">4.</p><br>
+                        //проверка на пустой объект<br>
+                        function isEmpty(user) {<br>
+                        for (var key in user) {<br>
+                        // если тело цикла начнет выполняться - значит в объекте есть свойства<br>
+                        return false;<br>
+                        }<br>
+                        return true;<br>
+                        }<br>
+                        console.log(isEmpty(user));<br><br>
                     </div>
                 </div>
             </div>
@@ -84,7 +94,8 @@
                 },<br>
                 ]</p>
         </div>
-        <p class="my-3">Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.</p>
+        <p class="my-3 bg-warning-subtle p-3">Получите из этого массива объект, где name == "Bob" и сохраните это в
+            какой-либо переменной.</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample2">
             <div class="accordion-item">
@@ -126,7 +137,7 @@
         </div>
 
         <h3 class="mt-5">Задание 3</h3>
-        <p class="my-3">Удалите из массива объектов (задание 2) объект с name == "Anna".</p>
+        <p class="my-3 bg-warning-subtle p-3">Удалите из массива объектов (задание 2) объект с name == "Anna".</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample3">
             <div class="accordion-item">
@@ -151,7 +162,8 @@
         </div>
 
         <h3 class="mt-5">Задание 4</h3>
-        <p class="my-3">Отсортируйте массив объектов в пункте 2 по свойству age в порядке возрастания.</p>
+        <p class="my-3 bg-warning-subtle p-3">Отсортируйте массив объектов в пункте 2 по свойству age в порядке
+            возрастания.</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample4">
             <div class="accordion-item">
@@ -181,7 +193,8 @@
                 token: 12343423<br>
                 };</p>
         </div>
-        <p class="my-3">Получите из объекта obj значение id в констанду id не используя выражение obj.id</p>
+        <p class="my-3 bg-warning-subtle p-3">Получите из объекта obj значение id в констанду id не используя выражение
+            obj.id</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample5">
             <div class="accordion-item">
@@ -209,7 +222,7 @@
                 class : "VI", <br>
                 age : 16 };</p>
         </div>
-        <p class="my-3">Получите список свойств объекта. Пример вывода : name, class, age</p>
+        <p class="my-3 bg-warning-subtle p-3">Получите список свойств объекта. Пример вывода : name, class, age</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample6">
             <div class="accordion-item">
@@ -255,7 +268,7 @@
         <h3 class="mt-5">Задание 8</h3>
         <!-- <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
         </div> -->
-        <p class="my-3">Получить длину объекта student.</p>
+        <p class="my-3 bg-warning-subtle p-3">Получить длину объекта student.</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample8">
             <div class="accordion-item">
@@ -308,7 +321,7 @@
             },<br>
             ];<br><br>
         </div>
-        <p class="my-3">Написать скрипт отображения статуса
+        <p class="my-3 bg-warning-subtle p-3">Написать скрипт отображения статуса
             чтения (то есть отображения названия книги, имени автора и статуса чтения) этих книг.<br>
             Hапример:"Hunger Games" Suzanne Collins- книгу нужно прочесть</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
@@ -338,7 +351,8 @@
             title: "my menu"<br>
             };
         </div>
-        <p class="my-3">Напишите скрипт,если значение объекта является числом (number), то его значение надо увеличить
+        <p class="my-3 bg-warning-subtle p-3">Напишите скрипт,если значение объекта является числом (number), то его
+            значение надо увеличить
             вдвое..</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample10">
@@ -365,11 +379,30 @@
         </div>
 
         <h3 class="mt-5">Задание 11</h3>
-        <!-- <p>Дан массив объектов</p> -->
+        <p> 1. Есть три объекта (три автомобиля): first_Car, second_Car и third_Car.<br>
+            2. Каждый из объектов (автомобилей) имеет набор свойств и соответствующих им значений (характеристики
+            автомобиля).<br>
+            3. Рассмотрим один из объектов:</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-
+            const first_Car = {<br>
+            make: "VAZ", /* производитель */<br>
+            model: 2106, /* модель */<br>
+            year: 1980, /* год выпуска */<br>
+            color: "beige", /* цвет */<br>
+            passengers: 5, /* число пассажиров */<br>
+            convertible: false, /* откидной верх */<br>
+            mileage: 80000 /* пробег */<br>
+            }<br><br>
         </div>
-        <p class="my-3"></p>
+        <p class="my-3 bg-warning-subtle p-3">
+            Нужно сделать следующее:
+            Написать функцию, которая проверяет автомобиль по двум параметрам (год выпуска и пробег)
+            и возвращает булево значение true или false.<br>
+            Подробности:
+            1. Функция имеет один параметр car, в качестве которого получает один из 3-х объектов.
+            Например, выше рассмотренный автомобиль first_Car.<br>
+            2. Функция должна работать с любым подобным объектом.
+        </p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample11">
             <div class="accordion-item">
@@ -382,16 +415,78 @@
                 <div id="collapseOne11" class="accordion-collapse collapse" data-bs-parent="#accordionExample11">
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p><br>
+
+                        /* 1-ый объект */<br>
+                        const first_Car = {<br>
+                        make: "VAZ" /* производитель */,<br>
+                        model: 2106 /* модель */,<br>
+                        year: 1980 /* год выпуска */,<br>
+                        color: "beige" /* цвет */,<br>
+                        passengers: 5 /* число пассажиров */,<br>
+                        convertible: false /* откидной верх */,<br>
+                        mileage: 80000 /* пробег */,<br>
+                        };<br>
+
+                        /* 2-ой объект */<br>
+                        const second_Car = {<br>
+                        make: "VW",<br>
+                        model: "Passat b3",<br>
+                        year: 1990,<br>
+                        color: "neptune",<br>
+                        passengers: 5,<br>
+                        convertible: false,<br>
+                        mileage: 160000,<br>
+                        };<br>
+
+                        /* 3-ий объект */<br>
+                        const third_Car = {<br>
+                        make: "Hyundai",<br>
+                        model: "Solaris",<br>
+                        year: 2012,<br>
+                        color: "wet asphalt",<br>
+                        passengers: 5,<br>
+                        convertible: false,<br>
+                        mileage: 15000,<br>
+                        };<br><br>
+                        function good_Car(car) {<br>
+                        if (car.year < 2000) {<br>
+                            return false;<br>
+                            } else if (car.mileage > 50000) {<br>
+                            return false;<br>
+                            } else {<br>
+                            return true;<br>
+                            }<br>
+                            }<br>
+                            function itog(car) {<br>
+                            let result = good_Car(car);<br>
+                            if (result) {<br>
+                            console.log(
+                            "У Вас неплохой автомобиль: " +
+                            car.year +
+                            " год выпуска, с пробегом " +
+                            car.mileage +
+                            " км."
+                            );<br>
+                            } else {<br>
+                            console.log("Не будем говорить о Вашем автомобиле....");<br>
+                            }<br>
+                            }<br>
+                            console.log(itog(second_Car));<br><br>
                     </div>
                 </div>
             </div>
         </div>
         <h3 class="mt-5">Задание 12</h3>
-        <!-- <p>Дан массив объектов</p> -->
+        <p>У нас есть объект, в котором хранятся зарплаты нашей команды:</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-
+            let salaries = {<br>
+            John: 100,<br>
+            Ann: 160,<br>
+            Pete: 130<br>
+            }<br>
         </div>
-        <p class="my-3"></p>
+        <p class="my-3 bg-warning-subtle p-3">Напишите код для суммирования всех зарплат и сохраните результат в
+            переменной sum. Должно получиться 390.</p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample12">
             <div class="accordion-item">
@@ -404,6 +499,11 @@
                 <div id="collapseOne12" class="accordion-collapse collapse" data-bs-parent="#accordionExample12">
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p><br>
+                        let sum = 0;<br>
+                        for (let key in salaries) {<br>
+                        sum += salaries[key];<br>
+                        }<br>
+                        console.log(sum);<br><br>
                     </div>
                 </div>
             </div>
@@ -413,7 +513,7 @@
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
 
         </div>
-        <p class="my-3"></p>
+        <p class="my-3 bg-warning-subtle p-3"></p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample13">
             <div class="accordion-item">
@@ -431,7 +531,8 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https:cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/script.js"></script>
 </body>
 
