@@ -523,9 +523,9 @@
             },<br>
             }<br>
         </div>
-        <p class="my-3 bg-warning-subtle p-3">Написать следующие функции для работы с таким объектом.<br>
+        <p class="my-3 bg-warning-subtle p-3"><b>Написать следующие функции для работы с таким объектом.</b><br>
             1.Функция принимает объект-прямоугольник и выводит
-информацию о нем (где какая точка расположена). */
+            информацию о нем (где какая точка расположена).<br>
             2.Функция принимает объект-прямоугольник и возвращает
             его ширину.<br>
             3.Функция принимает объект-прямоугольник и возвращает его высоту.<br>
@@ -533,12 +533,6 @@
             его площадь.<br>
             5.Функция принимает объект-прямоугольник и возвращает
             его периметр.<br>
-            6.Функция изменения ширины прямоугольника. Она прини-
-            мает объект-прямоугольник и на сколько единиц изменить
-            ширину.<br>
-            7.Функция изменения высоты прямоугольника. Она прини-
-            мает объект-прямоугольник и на сколько единиц изменить
-            высоту.<br>
         </p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample13">
@@ -551,7 +545,41 @@
                 </h2>
                 <div id="collapseOne13" class="accordion-collapse collapse" data-bs-parent="#accordionExample13">
                     <div class="accordion-body">
-                        <p class="bg-warning d-inline">1.</p><br>
+
+                        1.<br>
+                        function getRectPoints() {<br>
+                        console.log("startPoint (",rectangle.startPoint.x,",", rectangle.startPoint.y,")");<br>
+                        console.log("endPoint (",rectangle.endPoint.x, ",", rectangle.endPoint.y,")");<br>
+                        }<br>
+                        getRectPoints();<br>
+
+                        2.<br>
+                        function getRectWide() {<br>
+                        return rectangle.endPoint.x - rectangle.startPoint.x;<br>
+                        }<br>
+                        let width = getRectWide();<br>
+                        console.log("width", width);<br>
+
+                        3.<br>
+                        function getRectHeight() {<br>
+                        return rectangle.endPoint.y - rectangle.startPoint.y;<br>
+                        }<br>
+                        let height = getRectHeight();<br>
+                        console.log("height", height);<br>
+
+                        4.<br>
+                        function getRectArea() {<br>
+                        return getRectWide() * getRectHeight();<br>
+                        }<br>
+                        let area = getRectArea()<br>
+                        console.log('area', area)<br>
+
+                        5.<br>
+                        function getRectPerim() {<br>
+                        return (getRectWide() + getRectHeight()) * 2;<br>
+                        }<br>
+                        let perimetr = getRectPerim()<br>
+                        console.log('perimetr', perimetr)<br>
                     </div>
                 </div>
             </div>

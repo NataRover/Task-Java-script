@@ -309,10 +309,35 @@ var rectangle = {
 };
 //Написать следующие функции для работы с таким объектом.
 //1.Функция принимает объект-прямоугольник и выводит информацию о нем (где какая точка расположена).
+function getRectPoints() {
+    console.log("startPoint (", rectangle.startPoint.x, ",", rectangle.startPoint.y, ")");
+    console.log("endPoint (", rectangle.endPoint.x, ",", rectangle.endPoint.y, ")");
+}
+getRectPoints();
 // 2.Функция принимает объект-прямоугольник и возвращает его ширину.
+function getRectWide() {
+    return rectangle.endPoint.x - rectangle.startPoint.x;
+}
+var width = getRectWide();
+console.log("width", width);
 // 3.Функция принимает объект-прямоугольник и возвращает его высоту.
+function getRectHeight() {
+    return rectangle.endPoint.y - rectangle.startPoint.y;
+}
+var height = getRectHeight();
+console.log("height", height);
 // 4.Функция принимает объект-прямоугольник и возвращает его площадь.
+function getRectArea() {
+    return getRectWide() * getRectHeight();
+}
+var area = getRectArea();
+console.log('area', area);
 //5.Функция принимает объект-прямоугольник и возвращает его периметр.
+function getRectPerim() {
+    return (getRectWide() + getRectHeight()) * 2;
+}
+var perimetr = getRectPerim();
+console.log('perimetr', perimetr);
 //6.Функция изменения ширины прямоугольника. Она принимает объект-прямоугольник
 // и на сколько единиц изменить ширину.
 //7.Функция изменения высоты прямоугольника. Она принимает объект-прямоугольник
