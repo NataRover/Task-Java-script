@@ -27,13 +27,12 @@ else {
     console.log(user.age);
 }
 //4//
-console.log(Object.hasOwn(user, "age"));
+console.log(user.hasOwnProperty("age"));
 //true//
 //5//
 console.log(Object.keys(user) && "age" in user);
 //true//
 //6//
-//проверка на пустой объект
 function isEmpty(user) {
     for (var key in user) {
         // если тело цикла начнет выполняться - значит в объекте есть свойства
@@ -42,7 +41,6 @@ function isEmpty(user) {
     return true;
 }
 console.log(isEmpty(user));
-
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
@@ -294,4 +292,4 @@ function itog(car) {
         console.log("Не будем говорить о Вашем автомобиле....");
     }
 }
-console.log(itog(second_Car));
+itog(second_Car);

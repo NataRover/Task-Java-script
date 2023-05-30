@@ -24,7 +24,7 @@ if (JSON.stringify(user) == "{}") {
   console.log(user.age);
 }
 //4//
-console.log(Object.hasOwn(user, "age"));
+console.log(user.hasOwnProperty("age"));
 //true//
 //5//
 console.log(Object.keys(user) && "age" in user);
@@ -139,7 +139,7 @@ const student = {
   name: "David Ray",
   class: "VI",
   age: 16,
-};
+} as any
 //1//
 for (let el in student) {
   console.log(el);
@@ -311,4 +311,4 @@ function itog(car) {
     console.log("Не будем говорить о Вашем автомобиле....");
   }
 }
-console.log(itog(second_Car));
+itog(second_Car)
