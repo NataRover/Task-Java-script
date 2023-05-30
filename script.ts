@@ -17,6 +17,7 @@ if (typeof user.age !== "undefined" && user.hasOwnProperty("age")) {
 } else {
   console.log("объект пустой");
 }
+
 //3//
 if (JSON.stringify(user) == "{}") {
   console.log("пустой");
