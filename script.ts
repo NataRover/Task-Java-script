@@ -313,3 +313,4 @@ function itog(car) {
   }
 }
 itog(second_Car)
+
