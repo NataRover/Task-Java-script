@@ -631,11 +631,14 @@
         <p class="fst-italic fw-weight-normal orange-800">Вам вручили сверхсекретный материал....</p>
         <p>Дан объект</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-            var superSecretFile = {<br>
-            level: "classified",<br>
-            opened: 0,<br>
-            password: 2,<br>
-            };<br>
+            <p class="m-0">
+                var superSecretFile = {<br>
+                level: "classified",<br>
+                opened: 0,<br>
+                password: 2,<br>
+                };<br>
+            </p>
+            <img src="" alt="">
         </div>
         <p class="my-3 bg-warning-subtle p-3">Напишите две функции. Первая функция, getSecret, возвращает содержимое
             файла, если пароль указан правильно,
@@ -654,32 +657,32 @@
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p><br>
                         const superSecretFile = {<br>
-                            level: "classified",<br>
-                            opened: 0,<br>
-                            password: 2,<br>
-                            contents: " Dr. Evel's  next meeting is in Detroit",<br>
-                          };<br>
-                          
-                          function getSecret(file, secretPassword) {<br>
-                            file.opened = file.opened + 1;<br>
-                            if (secretPassword == file.password) {<br>
-                              return file.contents;<br>
-                            } else {<br>
-                              return "Invalid password! No secret for you.";<br>
-                            }<br>
-                          }<br>
-                          function setSecret(file, secretPassword, secret) {<br>
-                            if (secretPassword == file.password) {<br>
-                              file.opened = 0;<br>
-                              file.contents = secret;<br>
-                            }<br>
-                          }<br>
-                          let secret = getSecret(superSecretFile, 2);<br>
-                          console.log(secret);<br>
-                          
-                          setSecret(superSecretFile, 2, "Dr. Evel's  next meeting is in Philadelphia.");<br>
-                          secret = getSecret(superSecretFile, 2);<br>
-                          console.log(secret);<br><br>
+                        level: "classified",<br>
+                        opened: 0,<br>
+                        password: 2,<br>
+                        contents: " Dr. Evel's next meeting is in Detroit",<br>
+                        };<br>
+
+                        function getSecret(file, secretPassword) {<br>
+                        file.opened = file.opened + 1;<br>
+                        if (secretPassword == file.password) {<br>
+                        return file.contents;<br>
+                        } else {<br>
+                        return "Invalid password! No secret for you.";<br>
+                        }<br>
+                        }<br>
+                        function setSecret(file, secretPassword, secret) {<br>
+                        if (secretPassword == file.password) {<br>
+                        file.opened = 0;<br>
+                        file.contents = secret;<br>
+                        }<br>
+                        }<br>
+                        let secret = getSecret(superSecretFile, 2);<br>
+                        console.log(secret);<br>
+
+                        setSecret(superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.");<br>
+                        secret = getSecret(superSecretFile, 2);<br>
+                        console.log(secret);<br><br>
                     </div>
                 </div>
             </div>
