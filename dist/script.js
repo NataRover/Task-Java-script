@@ -374,3 +374,35 @@ function LoseWeight(dog, amout) {
 }
 LoseWeight(fido, 20);
 console.log(fido.name + " + \"now weight\" + " + fido.weight);
+//ЗАДАЧА-15//
+// Вам вручили сверхсекретный файл и две функции, позволяющие читать и записывать
+// содержимое файла, но только при наличии пароля. Первая функция, getSecret,
+// возвращает содержимое файла, если пароль указан правильно, и регистрирует все
+// попытки обращения к файлу. Вторая функция, setSecret, обновляет содержимое
+// файла и обнуляет счетчик обращений.
+var superSecretFile = {
+    level: "classified",
+    opened: 0,
+    password: 2,
+    contents: " Dr. Evel's  next meeting is in Detroit"
+};
+function getSecret(file, secretPassword) {
+    file.opened = file.opened + 1;
+    if (secretPassword == file.password) {
+        return file.contents;
+    }
+    else {
+        return "Invalid password! No secret for you.";
+    }
+}
+function setSecret(file, secretPassword, secret) {
+    if (secretPassword == file.password) {
+        file.opened = 0;
+        file.contents = secret;
+    }
+}
+var secret = getSecret(superSecretFile, 2);
+console.log(secret);
+setSecret(superSecretFile, 2, "Dr. Evel's  next meeting is in Philadelphia.");
+secret = getSecret(superSecretFile, 2);
+console.log(secret);
