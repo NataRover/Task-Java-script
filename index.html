@@ -27,7 +27,7 @@
         <h3>Задание 1 </h3>
         <p>У нас есть следующий объект:</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-            <p class="m-0">let user = {<br>
+            <p class="m-0">const user = {<br>
                 name: "John",<br>
                 age: 30<br>
                 };</p>
@@ -65,7 +65,7 @@
                         <p class="bg-warning d-inline">4.</p><br>
                         //проверка на пустой объект<br>
                         function isEmpty(user) {<br>
-                        for (var key in user) {<br>
+                        for (let key in user) {<br>
                         // если тело цикла начнет выполняться - значит в объекте есть свойства<br>
                         return false;<br>
                         }<br>
@@ -80,7 +80,7 @@
         <h3 class="mt-5">Задание 2</h3>
         <p>Имеется массив объектов:</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-            <p class="m-0"> let obj = [<br>
+            <p class="m-0"> const obj = [<br>
                 {<br>
                 name: "John",<br>
                 age: 30,<br>
@@ -109,7 +109,7 @@
                 <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p>
-                        let aboutBob = {};<br>
+                        const aboutBob = {};<br>
                         for (const user of obj) {<br>
                         if (user.name === "Bob") {<br>
                         Object.assign(aboutBob, user);<br>
