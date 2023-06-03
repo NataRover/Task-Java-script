@@ -632,7 +632,7 @@
         </div>
 
         <h3 class="mt-5">Задание 14</h3>
-        <p class="fst-italic fw-weight-normal orange-800">Сажаем Фидо на диету....</p>
+        <p class="fst-italic fw-weight-normal">Сажаем Фидо на диету....</p>
         <P>Дан обьект с описанием собаки по кличке Фидо</P>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
             <p class=" m-0"> const fido = {<br>
@@ -817,11 +817,36 @@
 
 
         <h3 class="mt-5">Задание 17</h3>
-        <p></p>
+        <p class="fst-italic fw-weight-normal fs-5 text-warning border p-2 border-warning border-2 d-inline-block">Найди
+            ошибку</p>
+        <p>Ниже приведен код</p>
         <div class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+            const song = {<br>
+            name: "Walk This Way",<br>
+            artist: "Run-D.M.C.",<br>
+            minutes: 4,<br>
+            seconds: 3,<br>
+            genre: "80s",<br>
+            playing: false,<br>
+            play: function() {<br>
+            if (!playing) {<br>
+            this = true;<br>
+            console.log("Playing " + name + " by " + artist);<br>
+            }<br>
+            }<br>
+            };<br>
 
+            pause: function() {<br>
+            if (playing) {<br>
+            this.playing = false;<br>
+            }<br>
+            }<br>
+
+            this.play();<br>
+            this.pause();
         </div>
         <p class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+            Найдите ошибки в коде
         </p>
         <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
         <div class="accordion" id="accordionExample17">
@@ -835,7 +860,27 @@
                 <div id="collapseOne17" class="accordion-collapse collapse" data-bs-parent="#accordionExample17">
                     <div class="accordion-body">
                         <p class="bg-warning d-inline">1.</p><br>
-
+                        const song = {<br>
+                        name: "Walk This Way",<br>
+                        artist: "Run-D.M.C.",<br>
+                        minutes: 4,<br>
+                        seconds: 3,<br>
+                        genre: "80s",<br>
+                        playing: false,<br>
+                        play: function() {<br>
+                        if (!this.playing) {<br>
+                        this.playing = true;<br>
+                        console.log("Playing"+ this.name + " by " + this.artist);<br>
+                        }<br>
+                        },<br>
+                        pause: function() {<br>
+                        if (this.playing) {<br>
+                        this.playing = false;<br>
+                        }<br>
+                        }<br>
+                        }<br>
+                        this song.play();<br>
+                        this song.pause();<br>
                     </div>
                 </div>
             </div>
