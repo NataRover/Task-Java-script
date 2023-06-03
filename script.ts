@@ -26,10 +26,10 @@ if (JSON.stringify(user) == "{}") {
 }
 //4//
 console.log(user.hasOwnProperty("age"));
-//true//
+
 //5//
 console.log(Object.keys(user) && "age" in user);
-//true//
+
 //6//
 function isEmpty(user) {
   for (let key in user) {
@@ -457,3 +457,57 @@ console.log(secret);
 setSecret(superSecretFile, 2, "Dr. Evel's  next meeting is in Philadelphia.");
 secret = getSecret(superSecretFile, 2);
 console.log(secret);
+
+// ЗАДАЧА-16
+
+//Создайте объект list, задайте для него: свойство values, содержащее массив похожих значений,
+// например, ка- ких-либо продуктов
+
+// Метод printList(), который сортирует все элементы массива values в алфавитном порядке
+// и выводит их в виде нумерованного списка в тело документа методом document.write(),
+//метод add(product), который добавля- ет к values еще один элемент.
+// Выведите сначала массив начальных значений объ- екта list с помощью его метода printList().
+//Например, это будет список продуктов:
+// 1.apple
+// 2.ice cream
+// 3.kivi
+// 4.potato
+// 5.sour creame
+// 6.tomato
+
+// Затем добавьте еще один какой-нибудь элемент с по- мощью метода add() и снова выведите все значений объекта
+//list методом printList().
+// 1.apple
+// 2.ice cream
+// 3.kivi
+// 4.potato
+// 5.sour creame
+// 6.tomato
+// 7.pumpkin
+
+// Затем замените все значения в свойстве list.values на другой массив и снова выведите его методом printList().
+//Например, так:
+// 1.Java Script
+// 2.C#
+// 3.HTML
+// 4.PHP
+
+const list = {
+  values: ["tomato", "kivi", "potato", "sour creame", "apple", "ice cream"],
+  printList: function () {
+    this.values.sort();
+    for (let index = 0; index < this.values.length; index++) {
+      const element = this.values[index];
+      console.log(`<ul><ol>${element}</ol></ul>`);
+    }
+  },
+  addProduct: function () {
+    this.values.push("pumkin");
+  },
+};
+list.printList();
+list.addProduct();
+list.printList();
+console.log(list.values);
+list.values = ["Java script", "C#", "HTML", "PHP"];
+console.log(list.values)
