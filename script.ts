@@ -1,3 +1,4 @@
+console.log("Hello friend! Task-1 \u{1F642}");
 // ЗАДАНИЕ 1
 //У нас есть следующий объект:
 //Проверьте, что этот объект не пустой и что в нем есть ключ age.
@@ -18,7 +19,6 @@ if (typeof user.age !== "undefined" && user.hasOwnProperty("age")) {
 } else {
   console.log("объект пустой");
 }
-
 //3//
 if (JSON.stringify(user) == "{}") {
   console.log("пустой");
@@ -51,7 +51,7 @@ for (let prop in user) {
     console.log("пустой");
   }
 }
-
+console.log("Hello friend! Task-2 \u{1F642}");
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
@@ -118,6 +118,7 @@ myArray.forEach((element, index, array) => {
   console.log(index); // 0, 1, 2
   console.log(array); // same myArray object 3 times
 });
+console.log("Hello friend! Task-3 \u{1F642}");
 // ЗАДАНИЕ 3
 // Удалите из массива объектов (задание 2) объект с name == "Anna".
 //1//
@@ -128,7 +129,7 @@ console.log(obj_2);
 const index = obj.findIndex((item) => item.name === "Anna");
 obj.splice(index, 1);
 console.log(obj);
-
+console.log("Hello friend! Task-4 \u{1F642}");
 // ЗАДАНИЕ 4
 // Отсортируйте массив объектов в пункте 2 по свойству age в порядке возрастания.
 //1//
@@ -136,6 +137,7 @@ obj.sort((a, b) => a.age - b.age);
 console.log(obj);
 
 // ЗАДАНИЕ 5
+console.log("Hello friend! Task-5 \u{1F642}");
 //Получите из объекта obj значение id и разместите его в константу userId.
 const obj_3 = {
   id: 5,
@@ -146,6 +148,7 @@ const { id: userId } = obj_3;
 console.log(userId);
 
 // ЗАДАНИЕ 6
+console.log("Hello friend! Task-6 \u{1F642}");
 //Получите список свойств объекта
 
 const student = {
@@ -158,12 +161,14 @@ for (let el in student) {
   console.log(el);
 }
 // ЗАДАНИЕ 7
+console.log("Hello friend! Task-7 \u{1F642}");
 //удаления свойства age из следующего объекта.
 
 delete student.age;
 console.log(student);
 
 // ЗАДАНИЕ 8
+console.log("Hello friend! Task-8 \u{1F642}");
 //Получить длину объекта student.
 //1//
 const objsize = Object.keys(student).length;
@@ -173,6 +178,7 @@ const objsize2 = Object.getOwnPropertyNames(student).length;
 console.log(objsize2);
 
 // ЗАДАНИЕ 9
+console.log("Hello friend! Task-9 \u{1F642}");
 //Напишите программу на JavaScript для отображения статуса
 //чтения (то есть отображения названия книги, имени автора и статуса чтения) следующих книг.
 const library = [
@@ -214,6 +220,7 @@ for (let index = 0; index < library.length; index++) {
 }
 
 // ЗАДАНИЕ 10
+console.log("Hello friend! Task-10 \u{1F642}");
 //Смысл задачи: если значение объекта является числом (number),
 //то его значение надо увеличить вдвое.
 const menu = {
@@ -238,7 +245,7 @@ console.log(menu);
 //3//
 
 //ЗАДАЧА 11//
-
+console.log("Hello friend! Task-11 \u{1F642}");
 // 1. Есть три объекта (три автомобиля): first_Car, second_Car и third_Car.
 // 2. Каждый из объектов (автомобилей) имеет набор свойств и соответствующих им значений (характеристики автомобиля).
 // 3. Рассмотрим один из объектов:
@@ -327,7 +334,7 @@ function itog(car) {
 itog(second_Car);
 
 //ЗАДАЧА-12//
-//
+console.log("Hello friend! Task-12 \u{1F642}");
 // Дан объект,описывающий прямоугольник (хранит коор-
 //     динаты левой верхней и правой нижней точек)
 
@@ -420,6 +427,7 @@ console.log("perimetr", perimetr);
 координаты точки. */
 
 //ЗАДАЧА 14//
+console.log("Hello friend! Task-14 \u{1F642}");
 const fido = {
   name: "Fido",
   weight: 48,
@@ -435,7 +443,7 @@ LoseWeight(fido, 20);
 console.log(`${fido.name} + "now weight" + ${fido.weight}`);
 
 //ЗАДАЧА-15//
-
+console.log("Hello friend! Task-15 \u{1F642}");
 // Вам вручили сверхсекретный файл и две функции, позволяющие читать и записывать
 // содержимое файла, но только при наличии пароля. Первая функция, getSecret,
 // возвращает содержимое файла, если пароль указан правильно, и регистрирует все
@@ -471,7 +479,7 @@ secret = getSecret(superSecretFile, 2);
 console.log(secret);
 
 // ЗАДАЧА-16
-
+console.log("Hello friend! Task-16 \u{1F642}");
 //Создайте объект list, задайте для него: свойство values, содержащее массив похожих значений,
 // например, ка- ких-либо продуктов
 
@@ -523,5 +531,3 @@ list.printList();
 console.log(list.values);
 list.values = ["Java script", "C#", "HTML", "PHP"];
 console.log(list.values);
-
-// alert('Hello friend! \u{1F642}')
