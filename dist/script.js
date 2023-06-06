@@ -34,24 +34,14 @@ console.log(user.hasOwnProperty("age"));
 console.log(Object.keys(user) && "age" in user);
 //6//
 function isEmpty(obj) {
+    var isEmpty = true;
     for (var prop in obj) {
         console.log(prop);
-        // если тело цикла начнет выполняться - значит в объекте есть свойства
-        return false;
+        isEmpty = false;
     }
-    return true;
+    return isEmpty;
 }
 console.log(isEmpty(user));
-//7//
-for (var prop in user) {
-    console.log(prop);
-    if (prop) {
-        console.log("не пустой");
-    }
-    else {
-        console.log("пустой");
-    }
-}
 console.log("Hello friend! Task-2 \uD83D\uDE42");
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
