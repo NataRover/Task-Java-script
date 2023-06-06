@@ -5,6 +5,7 @@ let user = {
   name: "John",
   age: 30,
 };
+console.log(typeof user);
 //1//
 if (Object.entries(user).length !== 0 && "age" in user) {
   console.log(user.age);
@@ -31,14 +32,25 @@ console.log(user.hasOwnProperty("age"));
 console.log(Object.keys(user) && "age" in user);
 
 //6//
-function isEmpty(user) {
-  for (let key in user) {
+function isEmpty(obj) {
+  for (let prop in obj) {
+    console.log(prop);
     // если тело цикла начнет выполняться - значит в объекте есть свойства
     return false;
   }
   return true;
 }
 console.log(isEmpty(user));
+
+//7//
+for (let prop in user) {
+  console.log(prop);
+  if (prop) {
+    console.log("не пустой");
+  } else {
+    console.log("пустой");
+  }
+}
 
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
@@ -510,4 +522,6 @@ list.addProduct();
 list.printList();
 console.log(list.values);
 list.values = ["Java script", "C#", "HTML", "PHP"];
-console.log(list.values)
+console.log(list.values);
+
+// alert('Hello friend! \u{1F642}')

@@ -1,12 +1,15 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 // ЗАДАНИЕ 1
 //У нас есть следующий объект:
 //Проверьте, что этот объект не пустой и что в нем есть ключ age.
 var user = {
   name: "John",
   age: 30
-}; //1//
+};
+console.log(_typeof(user)); //1//
 
 if (Object.entries(user).length !== 0 && "age" in user) {
   console.log(user.age);
@@ -29,25 +32,34 @@ if (JSON.stringify(user) == "{}") {
 } //4//
 
 
-console.log(Object.hasOwn(user, "age")); //true//
-//5//
+console.log(user.hasOwnProperty("age")); //5//
 
-console.log(Object.keys(user) && "age" in user); //true//
-//6//
-//проверка на пустой объект
+console.log(Object.keys(user) && "age" in user); //6//
 
-function isEmpty(user) {
-  for (var key in user) {
-    // если тело цикла начнет выполняться - значит в объекте есть свойства
+function isEmpty(obj) {
+  for (var prop in obj) {
+    console.log(prop); // если тело цикла начнет выполняться - значит в объекте есть свойства
+
     return false;
   }
 
   return true;
 }
 
-console.log(isEmpty(user)); // ЗАДАНИЕ 2
+console.log(isEmpty(user)); //7//
+
+for (var prop in user) {
+  console.log(prop);
+
+  if (prop) {
+    console.log("не пустой");
+  } else {
+    console.log("пустой");
+  }
+} // ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
+
 
 var obj = [{
   name: "John",
@@ -327,4 +339,180 @@ function itog(car) {
   }
 }
 
-console.log(itog(second_Car));
+itog(second_Car); //ЗАДАЧА-12//
+//
+// Дан объект,описывающий прямоугольник (хранит коор-
+//     динаты левой верхней и правой нижней точек)
+
+var rectangle = {
+  startPoint: {
+    x: 0,
+    y: 0
+  },
+  endPoint: {
+    x: 10,
+    y: 15
+  }
+}; //Написать следующие функции для работы с таким объектом.
+//1.Функция принимает объект-прямоугольник и выводит информацию о нем (где какая точка расположена).
+
+function getRectPoints() {
+  console.log("startPoint (", rectangle.startPoint.x, ",", rectangle.startPoint.y, ")");
+  console.log("endPoint (", rectangle.endPoint.x, ",", rectangle.endPoint.y, ")");
+}
+
+getRectPoints(); // 2.Функция принимает объект-прямоугольник и возвращает его ширину.
+
+function getRectWide() {
+  return rectangle.endPoint.x - rectangle.startPoint.x;
+}
+
+var width = getRectWide();
+console.log("width", width); // 3.Функция принимает объект-прямоугольник и возвращает его высоту.
+
+function getRectHeight() {
+  return rectangle.endPoint.y - rectangle.startPoint.y;
+}
+
+var height = getRectHeight();
+console.log("height", height); // 4.Функция принимает объект-прямоугольник и возвращает его площадь.
+
+function getRectArea() {
+  return getRectWide() * getRectHeight();
+}
+
+var area = getRectArea();
+console.log("area", area); //5.Функция принимает объект-прямоугольник и возвращает его периметр.
+
+function getRectPerim() {
+  return (getRectWide() + getRectHeight()) * 2;
+}
+
+var perimetr = getRectPerim();
+console.log("perimetr", perimetr); //6.Функция изменения ширины прямоугольника. Она принимает объект-прямоугольник
+// и на сколько единиц изменить ширину.
+//7.Функция изменения высоты прямоугольника. Она принимает объект-прямоугольник
+// и на сколько единиц изменить высоту.
+
+/* 8
+Функция изменения ширины и высоты прямоугольника.
+Она принимает объект-прямоугольник и два значения –
+для изменения ширины и высоты. */
+
+/* 9
+Функция смещения прямоугольника по оси X. Она при-
+нимает объект-прямоугольник и на сколько единиц его
+сдвинуть. */
+
+/* 10 Функция смещения прямоугольника по оси Y. Она при-
+нимает объект-прямоугольник и на сколько единиц его
+сдвинуть. */
+
+/*
+11 Функция смещения прямоугольника и по оси X и по
+оси Y. Она принимает объект-прямоугольник и два значе-
+ния: сдвиг по оси X и сдвиг по оси Y. */
+
+/* 12 Функция для проверки, находится ли точка внутри пря-
+моугольника. Она принимает объект-прямоугольник и
+координаты точки. */
+//ЗАДАЧА 14//
+
+var fido = {
+  name: "Fido",
+  weight: 48,
+  breed: "Mixed",
+  loves: "walks"
+}; // Предположим,мы тестируем новый метод по снижению веса собак.Напишите
+//функцию LoseWeight чтобы пользователь вводил обьект и вес,который нужно сбросить.А собака по волшебству,похудеет.
+
+function LoseWeight(dog, amout) {
+  dog.weight = dog.weight - amout;
+}
+
+LoseWeight(fido, 20);
+console.log(fido.name + " + \"now weight\" + " + fido.weight); //ЗАДАЧА-15//
+// Вам вручили сверхсекретный файл и две функции, позволяющие читать и записывать
+// содержимое файла, но только при наличии пароля. Первая функция, getSecret,
+// возвращает содержимое файла, если пароль указан правильно, и регистрирует все
+// попытки обращения к файлу. Вторая функция, setSecret, обновляет содержимое
+// файла и обнуляет счетчик обращений.
+
+var superSecretFile = {
+  level: "classified",
+  opened: 0,
+  password: 2,
+  contents: " Dr. Evel's  next meeting is in Detroit"
+};
+
+function getSecret(file, secretPassword) {
+  file.opened = file.opened + 1;
+
+  if (secretPassword == file.password) {
+    return file.contents;
+  } else {
+    return "Invalid password! No secret for you.";
+  }
+}
+
+function setSecret(file, secretPassword, secret) {
+  if (secretPassword == file.password) {
+    file.opened = 0;
+    file.contents = secret;
+  }
+}
+
+var secret = getSecret(superSecretFile, 2);
+console.log(secret);
+setSecret(superSecretFile, 2, "Dr. Evel's  next meeting is in Philadelphia.");
+secret = getSecret(superSecretFile, 2);
+console.log(secret); // ЗАДАЧА-16
+//Создайте объект list, задайте для него: свойство values, содержащее массив похожих значений,
+// например, ка- ких-либо продуктов
+// Метод printList(), который сортирует все элементы массива values в алфавитном порядке
+// и выводит их в виде нумерованного списка в тело документа методом document.write(),
+//метод add(product), который добавля- ет к values еще один элемент.
+// Выведите сначала массив начальных значений объ- екта list с помощью его метода printList().
+//Например, это будет список продуктов:
+// 1.apple
+// 2.ice cream
+// 3.kivi
+// 4.potato
+// 5.sour creame
+// 6.tomato
+// Затем добавьте еще один какой-нибудь элемент с по- мощью метода add() и снова выведите все значений объекта
+//list методом printList().
+// 1.apple
+// 2.ice cream
+// 3.kivi
+// 4.potato
+// 5.sour creame
+// 6.tomato
+// 7.pumpkin
+// Затем замените все значения в свойстве list.values на другой массив и снова выведите его методом printList().
+//Например, так:
+// 1.Java Script
+// 2.C#
+// 3.HTML
+// 4.PHP
+
+var list = {
+  values: ["tomato", "kivi", "potato", "sour creame", "apple", "ice cream"],
+  printList: function printList() {
+    this.values.sort();
+
+    for (var index_2 = 0; index_2 < this.values.length; index_2++) {
+      var element = this.values[index_2];
+      console.log("<ul><ol>" + element + "</ol></ul>");
+    }
+  },
+  addProduct: function addProduct() {
+    this.values.push("pumkin");
+  }
+};
+list.printList();
+list.addProduct();
+list.printList();
+console.log(list.values);
+list.values = ["Java script", "C#", "HTML", "PHP"];
+console.log(list.values); // alert('Hello friend! \u{1F642}')

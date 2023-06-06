@@ -73,8 +73,8 @@
                                     }<br><br>
                                     <p class="bg-warning d-inline">4.</p><br>
                                     //проверка на пустой объект<br>
-                                    function isEmpty(user) {<br>
-                                    for (let key in user) {<br>
+                                    function isEmpty(obj) {<br>
+                                    for (let prop in obj) {<br>
                                     // если тело цикла начнет выполняться - значит в объекте есть свойства<br>
                                     return false;<br>
                                     }<br>
@@ -683,7 +683,7 @@
                             breed: "Mixed",<br>
                             loves: "walks",<br>
                             };<br></p>
-                        <img src="img/dog.png" alt="" width="100px">
+                        <img src="img/dog.png" alt="" width="100px" id="img-dog">
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">

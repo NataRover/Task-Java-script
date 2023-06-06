@@ -5,6 +5,7 @@ var user = {
     name: "John",
     age: 30
 };
+console.log(typeof user);
 //1//
 if (Object.entries(user).length !== 0 && "age" in user) {
     console.log(user.age);
@@ -31,14 +32,25 @@ console.log(user.hasOwnProperty("age"));
 //5//
 console.log(Object.keys(user) && "age" in user);
 //6//
-function isEmpty(user) {
-    for (var key in user) {
+function isEmpty(obj) {
+    for (var prop in obj) {
+        console.log(prop);
         // если тело цикла начнет выполняться - значит в объекте есть свойства
         return false;
     }
     return true;
 }
 console.log(isEmpty(user));
+//7//
+for (var prop in user) {
+    console.log(prop);
+    if (prop) {
+        console.log("не пустой");
+    }
+    else {
+        console.log("пустой");
+    }
+}
 // ЗАДАНИЕ 2
 // Имеется массив объектов:
 //Получите из этого массива объект, где name == "Bob" и сохраните это в какой-либо переменной.
@@ -452,3 +464,4 @@ list.printList();
 console.log(list.values);
 list.values = ["Java script", "C#", "HTML", "PHP"];
 console.log(list.values);
+// alert('Hello friend! \u{1F642}')
