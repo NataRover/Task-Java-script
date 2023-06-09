@@ -484,7 +484,7 @@ function string(str1, str2) {
     else if (str2 > str1) {
         return -1;
     }
-    else if (str2 === str1) {
+    else if (str2 == str1) {
         return 0;
     }
 }
@@ -507,3 +507,35 @@ function countVowel(str) {
     return str.match(/[aeiou]/gi).length;
 }
 console.log(countVowel("Some love one"));
+//ЗАДАЧА-4
+console.log("Hello friend! Task-4(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/*Написать функцию для проверки спама в переданной
+строке. Функция возвращает true, если строка содержит
+спам. Спамом считать следующие слова: 100% бесплатно,
+увеличение продаж, только сегодня, не удаляйте, ххх.
+Функция должна быть нечувствительна к регистру.*/
+function checkSpam(str) {
+    var lowstr = str.toLowerCase();
+    return (lowstr.indexOf("100% бесплатно") != -1 ||
+        lowstr.indexOf("xxx") != -1 ||
+        lowstr.indexOf("увеличение продаж") != -1 ||
+        lowstr.indexOf("только сегодня") != -1 ||
+        lowstr.indexOf("не удаляйте") != -1);
+}
+console.log(checkSpam("привет"));
+console.log(checkSpam("Xxx"));
+console.log(checkSpam("Не уДаЛяйте"));
+//2
+function checkSpam1(str) {
+    var lowstr = str.toLowerCase();
+    return (lowstr.includes("100% бесплатно") ||
+        lowstr.includes("xxx") ||
+        lowstr.includes("увеличение продаж") ||
+        lowstr.includes("только сегодня") ||
+        lowstr.includes("не удаляйте"));
+}
+console.log(checkSpam1("привет"));
+console.log(checkSpam1("XxX"));
+console.log(checkSpam1("Не уДаЛяйте"));
+//ЗАДАЧА-5
+console.log("Hello friend! Task-5(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");

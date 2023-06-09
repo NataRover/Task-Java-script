@@ -983,7 +983,7 @@
                     <p> Написать функцию, которая принимает 2 строки и сравнивает их длину.</p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-                        <p class="m-0"></p>
+                        <p class="m-0 invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, consequatur ducimus sunt animi maiores in aliquid accusantium consectetur ipsam molestiae?</p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
@@ -1081,15 +1081,72 @@
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
                                     function countVowel(str) { <br>
-                                        return str.match(/[aeiou]/gi).length;<br>                                        
-                                       }<br>
-                                       console.log(countVowel("Some love one"))<br><br>
+                                    return str.match(/[aeiou]/gi).length;<br>
+                                    }<br>
+                                    console.log(countVowel("Some love one"))<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Задание 4</h3>
+                    <p> </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Написать функцию для проверки спама в переданной
+                        строке. Функция возвращает true, если строка содержит
+                        спам. Спамом считать следующие слова: 100% бесплатно,
+                        увеличение продаж, только сегодня, не удаляйте, ххх.
+                        Функция должна быть нечувствительна к регистру.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample4">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne4" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample4">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function checkSpam(str) {<br>
+                                    let lowstr = str.toLowerCase();<br>
+                                    return (<br>
+                                    lowstr.indexOf("100% бесплатно") != -1 ||<br>
+                                    lowstr.indexOf("xxx") != -1 ||<br>
+                                    lowstr.indexOf("увеличение продаж") != -1 ||<br>
+                                    lowstr.indexOf("только сегодня") != -1 ||<br>
+                                    lowstr.indexOf("не удаляйте") != -1<br>
+                                    );<br>
+                                    }<br>
+                                    console.log(checkSpam("привет"));<br>
+                                    console.log(checkSpam("Xxx"));<br>
+                                    console.log(checkSpam("Не уДаЛяйте"));<br><br>
+                                    <p class="bg-warning d-inline">2.</p>
+                                    function checkSpam(str) {<br>
+                                    let lowstr = str.toLowerCase();<br>
+                                    return (<br>
+                                    lowstr.includes("100% бесплатно") ||<br>
+                                    lowstr.includes("xxx") ||<br>
+                                    lowstr.includes("увеличение продаж") ||<br>
+                                    lowstr.includes("только сегодня") ||<br>
+                                    lowstr.includes("не удаляйте")<br>
+                                    );<br>
+                                    }<br>
+                                    console.log(checkSpam("привет"));<br>
+                                    console.log(checkSpam("XxX"));<br>
+                                    console.log(checkSpam("Не уДаЛяйте"));<br><br>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- другие задачи -->
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
