@@ -1,3 +1,4 @@
+//ОБЪЕКТЫ
 console.log("Hello friend! Task-1 \uD83D\uDE42");
 // ЗАДАНИЕ 1
 //У нас есть следующий объект:
@@ -478,3 +479,41 @@ list.printList();
 console.log(list.values);
 list.values = ["Java script", "C#", "HTML", "PHP"];
 console.log(list.values);
+//СТРОКИ
+console.log("Hello friend! Task-1(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//ЗАДАЧА-1
+/*Написать функцию, которая принимает 2 строки и срав-
+нивает их длину.Функция возвращает 1, если в первой
+строке больше символов, чем во второй;-1 – если во вто-
+рой больше символов, чем в первой;или 0 – если строки
+одинаковой длины */
+function string(str1, str2) {
+    if (str1 > str2) {
+        return 1;
+    }
+    else if (str2 > str1) {
+        return -1;
+    }
+    else if (str2 === str1) {
+        return 0;
+    }
+}
+console.log(string("more", "butterfly"));
+//ЗАДАЧА-2
+console.log("Hello friend! Task-2(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/*Написать функцию, которая переводит в верхний регистр
+первый символ переданной строки*/
+function upString(str) {
+    if (!str)
+        return str;
+    return str[0].toUpperCase() + str.slice(1);
+}
+console.log(upString("dracula"));
+//ЗАДАЧА-3
+console.log("Hello friend! Task-3(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/*Написать функцию, которая считает количество гласных
+букв в переданной строке.*/
+function countVowel(str) {
+    return str.match(/[aeiou]/gi).length;
+}
+console.log(countVowel("Some love one"));

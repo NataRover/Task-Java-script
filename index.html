@@ -25,6 +25,7 @@
     <div class="container-fluid  px-5 py-3 mb-5 d-flex gap-3 align-items-start justify-content-between   ">
         <!-- контент -->
         <div class="tab-content " id="v-pills-tabContent">
+            <!-- обьекты -->
             <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
                 tabindex="0">
                 <div class="">
@@ -973,15 +974,124 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
-                tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi modi cumque facere sapiente
-                quibusdam quaerat, ad dolor? Ut tempora sunt expedita officia voluptatibus odio, minima doloremque nemo
-                provident natus veritatis quis. Id consequatur consequuntur itaque, illo corrupti est, debitis veniam
-                non a ad fugit, voluptate totam laboriosam illum eius officia laborum et provident aliquam porro
-                architecto vero libero. Obcaecati aperiam ab soluta illo deleniti nihil aspernatur, laborum odit
-                accusantium eius quisquam modi, id reprehenderit quibusdam doloremque nulla natus molestias eum dolore
-                repudiandae voluptatem laudantium assumenda perferendis. Amet, temporibus obcaecati, molestiae facilis
-                placeat inventore alias consequuntur iste eum labore id. Reiciendis.</div>
+            <!-- строки -->
+            <div class="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"
+                tabindex="0">
+                <div class="">
+                    <h2 class="text-secondary">Задачи по работе с строками</h2>
+                    <h3>Задание 1</h3>
+                    <p> Написать функцию, которая принимает 2 строки и сравнивает их длину.</p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+
+                        Функция возвращает 1, если в первой
+                        строке больше символов, чем во второй<br>
+                        -1 – если во второй больше символов, чем в первой <br>
+                        или 0 – если строки одинаковой длины
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample1">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne1" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function string(str1, str2) {<br>
+                                    if (str1 > str2) {<br>
+                                    return 1;<br>
+                                    } else if (str2 > str1) {<br>
+                                    return -1;<br>
+                                    } else if (str2 === str1) {<br>
+                                    return 0;<br>
+                                    }<br>
+                                    }<br>
+                                    console.log(string("more", "butterfly"));<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-2 -->
+
+                    <h3>Задание 2</h3>
+                    <p> </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Написать функцию, которая переводит в верхний регистр
+                        первый символ переданной строки.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample2">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function upString(str) {<br>
+                                    if (!str) return str;<br>
+                                    return str[0].toUpperCase() + str.slice(1);<br>
+                                    }<br>
+                                    console.log(upString("dracula"));<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-3 -->
+                    <h3>Задание 3</h3>
+                    <p> </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Написать функцию, которая считает количество гласных
+                        букв в переданной строке.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample3">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne3" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample3">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function countVowel(str) { <br>
+                                        return str.match(/[aeiou]/gi).length;<br>                                        
+                                       }<br>
+                                       console.log(countVowel("Some love one"))<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- другие задачи -->
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
                 tabindex="0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur libero in quasi
                 repellendus provident, inventore rem necessitatibus vel aliquam tempora neque est dolor placeat,
@@ -999,6 +1109,7 @@
                 excepturi impedit autem. Temporibus quae veritatis, ad cum consequatur, placeat odio laboriosam
                 obcaecati maxime ipsum dolores, cumque tempora explicabo inventore culpa rem repellendus. Numquam,
                 dolorem earum nesciunt aperiam pariatur itaque sunt illo explicabo.</div>
+            <!-- другие задачи -->
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
                 tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aut necessitatibus vel
                 soluta facere ab architecto rem quo nesciunt recusandae, corporis numquam natus itaque quasi dicta?
@@ -1023,16 +1134,12 @@
                 aria-selected="true">Задачи по работе с объектами
             </button>
 
-            <button class="nav-link text-bg-light border w-100" id="v-pills-profile-tab" data-bs-toggle="pill"
+            <button class="nav-link bg-none p-2 text-bg-light border " id="v-pills-profile-tab" data-bs-toggle="pill"
                 data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
-                aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-hammer" viewBox="0 0 16 16">
-                    <path
-                        d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z" />
-                </svg>
+                aria-selected="false">Задачи по работе с строками
             </button>
 
-            <button class="nav-link text-bg-light border w-100" id="v-pills-messages-tab" data-bs-toggle="pill"
+            <button class="nav-link bg-none p-2 text-bg-light border " id="v-pills-messages-tab" data-bs-toggle="pill"
                 data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
                 aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-hammer" viewBox="0 0 16 16">
@@ -1040,7 +1147,7 @@
                         d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z" />
                 </svg>
             </button>
-            <button class="nav-link text-bg-light border w-100" id="v-pills-settings-tab" data-bs-toggle="pill"
+            <button class="nav-link bg-none p-2 text-bg-light border" id="v-pills-settings-tab" data-bs-toggle="pill"
                 data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
                 aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-hammer" viewBox="0 0 16 16">
