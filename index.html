@@ -1088,6 +1088,7 @@
                             </div>
                         </div>
                     </div>
+                     <!-- ЗАДАНИЕ-4 -->
                     <h3>Задание 4</h3>
                     <p> </p>
                     <div
@@ -1146,6 +1147,48 @@
                             </div>
                         </div>
                     </div>
+
+                      <!-- ЗАДАНИЕ-5 -->
+                      <h3>Задание 5</h3>
+                      <p> </p>
+                      <div
+                          class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                          <p class="m-0"></p>
+                      </div>
+                      <p
+                          class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                          Написать функцию сокращения строки. Функция прини-
+                          мает строку и ее максимальную длину. Если длина строки
+                          больше, чем максимальная, то необходимо отбросить
+                          лишние символы, добавив вместо них троеточие.
+                          Например: truncate(“Hello, world!”, 8) должна вернуть
+                          “Hello...”
+                      </p>
+                      <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                      <div class="accordion" id="accordionExample5">
+                          <div class="accordion-item border-3 ">
+                              <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                      Решение
+                                  </button>
+                              </h2>
+                              <div id="collapseOne5" class="accordion-collapse collapse"
+                                  data-bs-parent="#accordionExample5">
+                                  <div class="accordion-body">
+                                      <p class="bg-warning d-inline">1.</p>
+                                      function truncateString(str, num) {<br>
+                                        if (str.length > num) {<br>
+                                          return str.slice(0, num) + "...";<br>
+                                        } else {<br>
+                                          return str;<br>
+                                        }<br>
+                                      }<br>
+                                      console.log(truncateString("Hello,world!", 5));<br><br>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                 </div>
             </div>
             <!-- другие задачи -->

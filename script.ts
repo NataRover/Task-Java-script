@@ -590,11 +590,11 @@ console.log(checkSpam("Не уДаЛяйте"));
 function checkSpam1(str) {
   let lowstr = str.toLowerCase();
   return (
-    lowstr.includes("100% бесплатно")  ||
-    lowstr.includes("xxx")  ||
-    lowstr.includes("увеличение продаж")  ||
-    lowstr.includes("только сегодня")  ||
-    lowstr.includes("не удаляйте") 
+    lowstr.includes("100% бесплатно") ||
+    lowstr.includes("xxx") ||
+    lowstr.includes("увеличение продаж") ||
+    lowstr.includes("только сегодня") ||
+    lowstr.includes("не удаляйте")
   );
 }
 
@@ -604,3 +604,25 @@ console.log(checkSpam1("Не уДаЛяйте"));
 
 //ЗАДАЧА-5
 console.log("Hello friend! Task-5(строки) \u{1F642}");
+
+/* Написать функцию сокращения строки. Функция прини-
+мает строку и ее максимальную длину. Если длина строки
+больше, чем максимальная, то необходимо отбросить
+лишние символы, добавив вместо них троеточие.
+Например: truncate(“Hello, world!”, 8) должна вернуть
+“Hello...” */
+
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
+console.log(truncateString("Hello,world!", 5));
+
+//ЗАДАЧА-6
+console.log("Hello friend! Task-5(строки) \u{1F642}");
+
+/*Написать функцию, которая проверяет, является ли пере-
+данная строка палиндромом. */

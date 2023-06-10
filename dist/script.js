@@ -539,3 +539,22 @@ console.log(checkSpam1("XxX"));
 console.log(checkSpam1("Не уДаЛяйте"));
 //ЗАДАЧА-5
 console.log("Hello friend! Task-5(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/* Написать функцию сокращения строки. Функция прини-
+мает строку и ее максимальную длину. Если длина строки
+больше, чем максимальная, то необходимо отбросить
+лишние символы, добавив вместо них троеточие.
+Например: truncate(“Hello, world!”, 8) должна вернуть
+“Hello...” */
+function truncateString(str, num) {
+    if (str.length > num) {
+        return str.slice(0, num) + "...";
+    }
+    else {
+        return str;
+    }
+}
+console.log(truncateString("Hello,world!", 5));
+//ЗАДАЧА-6
+console.log("Hello friend! Task-5(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/*Написать функцию, которая проверяет, является ли пере-
+данная строка палиндромом. */
