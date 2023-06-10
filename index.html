@@ -983,7 +983,9 @@
                     <p> Написать функцию, которая принимает 2 строки и сравнивает их длину.</p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-                        <p class="m-0 invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, consequatur ducimus sunt animi maiores in aliquid accusantium consectetur ipsam molestiae?</p>
+                        <p class="m-0 invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                            consequatur ducimus sunt animi maiores in aliquid accusantium consectetur ipsam molestiae?
+                        </p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
@@ -1088,7 +1090,7 @@
                             </div>
                         </div>
                     </div>
-                     <!-- ЗАДАНИЕ-4 -->
+                    <!-- ЗАДАНИЕ-4 -->
                     <h3>Задание 4</h3>
                     <p> </p>
                     <div
@@ -1148,47 +1150,97 @@
                         </div>
                     </div>
 
-                      <!-- ЗАДАНИЕ-5 -->
-                      <h3>Задание 5</h3>
-                      <p> </p>
-                      <div
-                          class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
-                          <p class="m-0"></p>
-                      </div>
-                      <p
-                          class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-                          Написать функцию сокращения строки. Функция прини-
-                          мает строку и ее максимальную длину. Если длина строки
-                          больше, чем максимальная, то необходимо отбросить
-                          лишние символы, добавив вместо них троеточие.
-                          Например: truncate(“Hello, world!”, 8) должна вернуть
-                          “Hello...”
-                      </p>
-                      <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                      <div class="accordion" id="accordionExample5">
-                          <div class="accordion-item border-3 ">
-                              <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                      data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
-                                      Решение
-                                  </button>
-                              </h2>
-                              <div id="collapseOne5" class="accordion-collapse collapse"
-                                  data-bs-parent="#accordionExample5">
-                                  <div class="accordion-body">
-                                      <p class="bg-warning d-inline">1.</p>
-                                      function truncateString(str, num) {<br>
-                                        if (str.length > num) {<br>
-                                          return str.slice(0, num) + "...";<br>
-                                        } else {<br>
-                                          return str;<br>
-                                        }<br>
-                                      }<br>
-                                      console.log(truncateString("Hello,world!", 5));<br><br>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                    <!-- ЗАДАНИЕ-5 -->
+                    <h3>Задание 5</h3>
+                    <p> </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Написать функцию сокращения строки. Функция принимает строку и ее максимальную длину. Если длина
+                        строки
+                        больше, чем максимальная, то необходимо отбросить
+                        лишние символы, добавив вместо них троеточие.
+                        Например: truncate(“Hello, world!”, 8) должна вернуть
+                        “Hello...”
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample5">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne5" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample5">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function truncateString(str, num) {<br>
+                                    if (str.length > num) {<br>
+                                    return str.slice(0, num) + "...";<br>
+                                    } else {<br>
+                                    return str;<br>
+                                    }<br>
+                                    }<br>
+                                    console.log(truncateString("Hello,world!", 5));<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-6 -->
+                    <h3>Задание 6</h3>
+                    <p> </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-info-subtle">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Написать функцию, которая проверяет, является ли переданная строка палиндромом.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample6">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne6" aria-expanded="true" aria-controls="collapseOne6">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne6" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample6">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline">1.</p>
+                                    function palindrome(str) {<br>
+                                    return str.split('').reverse().join('') == str;<br>
+                                    }<br>
+                                    console.log(palindrome("anna"));<br>
+                                    console.log(palindrome("annA"));<br>
+                                    console.log(palindrome("123321"));<br>
+                                    console.log(palindrome("art123art"));<br><br>
+                                    <p class="bg-warning d-inline">2.</p>
+                                    function palindrome(str) {<br>
+                                    let check = "";<br>
+                                    for (let i = str.length - 1; i >= 0; --i) {<br>
+                                    check += str[i];<br>
+                                    }<br>
+                                    return str == check;<br>
+                                    }<br>
+
+                                    console.log(palindrome("34543"));<br>
+                                    console.log(palindrome("345543"));<br>
+                                    console.log(palindrome("3"));<br>
+                                    console.log(palindrome(""));<br>
+                                    console.log(palindrome("723210"));<br><br>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- другие задачи -->

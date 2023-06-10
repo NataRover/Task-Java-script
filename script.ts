@@ -622,7 +622,29 @@ function truncateString(str, num) {
 console.log(truncateString("Hello,world!", 5));
 
 //ЗАДАЧА-6
-console.log("Hello friend! Task-5(строки) \u{1F642}");
+console.log("Hello friend! Task-6(строки) \u{1F642}");
 
 /*Написать функцию, которая проверяет, является ли пере-
 данная строка палиндромом. */
+//1
+function palindrome(str) {
+  return str.split("").reverse().join("") == str;
+}
+console.log(palindrome("anna"));
+console.log(palindrome("annA"));
+console.log(palindrome("123321"));
+console.log(palindrome("art123art"));
+//2
+function palindrome(str) {
+  let check = "";
+  for (let i = str.length - 1; i >= 0; --i) {
+    check += str[i];
+  }
+  return str == check;
+}
+
+console.log(palindrome("34543"));
+console.log(palindrome("345543"));
+console.log(palindrome("3"));
+console.log(palindrome(""));
+console.log(palindrome("723210"));
