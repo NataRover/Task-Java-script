@@ -587,3 +587,21 @@ function txt(str) {
     return str.split(" ").length;
 }
 console.log(txt("каждый охотник желает знать"));
+//ЗАДАЧА-8
+console.log("Hello friend! Task-8(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Написать функцию, которая возвращает самое длинное
+//cлово из предложения.
+function txt(str) {
+    str = str.split(" ");
+    var longeStr = " ";
+    for (var index_3 = 0; index_3 < str.length; index_3++) {
+        var element = str[index_3];
+        // console.log(element.length);
+        if (element.length > longeStr.length) {
+            longeStr = element;
+        }
+    }
+    return longeStr;
+}
+console.log(txt("May the force be with!"));
+console.log(txt("The quick brown fox jumps over the lazy dog"));

@@ -655,6 +655,25 @@ console.log("Hello friend! Task-7(строки) \u{1F642}");
 // предложении.
 
 function txt(str) {
-  return str.split(" ").length
+  return str.split(" ").length;
 }
 console.log(txt("каждый охотник желает знать"));
+
+//ЗАДАЧА-8
+console.log("Hello friend! Task-8(строки) \u{1F642}");
+//Написать функцию, которая возвращает самое длинное
+//cлово из предложения.
+function txt(str) {
+  str = str.split(" ");
+  let longeStr = " ";
+  for (let index = 0; index < str.length; index++) {
+    const element = str[index];
+    // console.log(element.length);
+    if (element.length > longeStr.length) {
+      longeStr = element;
+    }
+  }
+  return longeStr;
+}
+console.log(txt("May the force be with!"));
+console.log(txt("The quick brown fox jumps over the lazy dog"));
