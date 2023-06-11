@@ -648,3 +648,13 @@ console.log(palindrome("345543"));
 console.log(palindrome("3"));
 console.log(palindrome(""));
 console.log(palindrome("723210"));
+
+//ЗАДАЧА-7
+console.log("Hello friend! Task-7(строки) \u{1F642}");
+// Написать функцию, которая считает количество слов в
+// предложении.
+
+function txt(str) {
+  return str.split(" ").length
+}
+console.log(txt("каждый охотник желает знать"));
