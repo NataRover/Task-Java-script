@@ -663,7 +663,7 @@ console.log(txt("каждый охотник желает знать"));
 console.log("Hello friend! Task-8(строки) \u{1F642}");
 //Написать функцию, которая возвращает самое длинное
 //cлово из предложения.
-function txt(str) {
+function txt_2(str) {
   str = str.split(" ");
   let longeStr = " ";
   for (let index = 0; index < str.length; index++) {
@@ -675,5 +675,26 @@ function txt(str) {
   }
   return longeStr;
 }
-console.log(txt("May the force be with!"));
-console.log(txt("The quick brown fox jumps over the lazy dog"));
+console.log(txt_2("May the force be with!"));
+console.log(txt_2("The quick brown fox jumps over the lazy dog"));
+
+//ЗАДАЧА-9
+console.log("Hello friend! Task-9(строки) \u{1F642}");
+// Написать функцию, которая считает среднюю длину слова
+// в предложении.
+function text_3(str) {
+  str = str.split(" ");
+  // console.log(str.length);
+  let midleStr = " ";
+  let sumStr = " ";
+  for (let index = 0; index < str.length; index++) {
+    const element = str[index];
+    // console.log(element);
+  }
+  sumStr = sumStr + element;
+  midleStr = midleStr + sumStr / str.length;
+  console.log(midleStr);
+  return midleStr;
+}
+
+console.log(text_3("gg fff rrrr"));

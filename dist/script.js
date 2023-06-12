@@ -591,7 +591,7 @@ console.log(txt("каждый охотник желает знать"));
 console.log("Hello friend! Task-8(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 //Написать функцию, которая возвращает самое длинное
 //cлово из предложения.
-function txt(str) {
+function txt_2(str) {
     str = str.split(" ");
     var longeStr = " ";
     for (var index_3 = 0; index_3 < str.length; index_3++) {
@@ -603,5 +603,24 @@ function txt(str) {
     }
     return longeStr;
 }
-console.log(txt("May the force be with!"));
-console.log(txt("The quick brown fox jumps over the lazy dog"));
+console.log(txt_2("May the force be with!"));
+console.log(txt_2("The quick brown fox jumps over the lazy dog"));
+//ЗАДАЧА-9
+console.log("Hello friend! Task-9(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая считает среднюю длину слова
+// в предложении.
+function text_3(str) {
+    str = str.split(" ");
+    // console.log(str.length);
+    var midleStr = " ";
+    var sumStr = " ";
+    for (var index_4 = 0; index_4 < str.length; index_4++) {
+        var element = str[index_4];
+        // console.log(element);
+    }
+    sumStr = sumStr + element;
+    midleStr = midleStr + sumStr / str.length;
+    console.log(midleStr);
+    return midleStr;
+}
+console.log(text_3("gg fff rrrr"));
