@@ -698,3 +698,22 @@ function text_3(str) {
 }
 
 console.log(text_3("gg fff rrrr"));
+
+//ЗАДАЧА-10
+console.log("Hello friend! Task-10(строки) \u{1F642}");
+/*Написать функцию, которая принимает строку и символ
+и выводит индексы, по которым находится этот символ в
+строке. Также вывести, сколько всего раз встречается этот
+символ в строке.*/
+function strSymb(str) {
+  str = str.split("");
+  console.log(str)
+  for (let index = 0; index < str.length; index++) {
+    const element = str[index];
+    console.log(element)
+    element.charAt()
+    
+  }
+}
+
+console.log(strSymb("Hello friend!"));
