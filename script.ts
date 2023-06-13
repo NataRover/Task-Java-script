@@ -121,6 +121,7 @@ console.log(obj_2);
 const index = obj.findIndex((item) => item.name === "Anna");
 obj.splice(index, 1);
 console.log(obj);
+
 console.log("Hello friend! Task-4 \u{1F642}");
 // ЗАДАНИЕ 4
 // Отсортируйте массив объектов в пункте 2 по свойству age в порядке возрастания.
@@ -314,10 +315,10 @@ function itog(car) {
   if (result) {
     console.log(
       "У Вас неплохой автомобиль: " +
-        car.year +
-        " год выпуска, с пробегом " +
-        car.mileage +
-        " км."
+      car.year +
+      " год выпуска, с пробегом " +
+      car.mileage +
+      " км."
     );
   } else {
     console.log("Не будем говорить о Вашем автомобиле....");
@@ -537,7 +538,7 @@ function string(str1, str2) {
     return 1;
   } else if (str2.length > str1.length) {
     return -1;
-  } 
+  }
   return 0;
 }
 console.log(string("more", "butterfly"));
@@ -613,7 +614,7 @@ console.log("Hello friend! Task-5(строки) \u{1F642}");
 
 function truncateString(str, num) {
   if (str.length > num) {
-    return str.slice(0, num-3) + "...";
+    return str.slice(0, num - 3) + "...";
   } else {
     return str;
   }
@@ -703,19 +704,20 @@ console.log("Hello friend! Task-10(строки) \u{1F642}");
 и выводит индексы, по которым находится этот символ в
 строке. Также вывести, сколько всего раз встречается этот
 символ в строке.*/
-function strSymb(str:string, symb) {
+function strSymb(str: string, symb) {
   let inStr = "";
   let index = 0
   while (true) {
     index = str.indexOf(symb, index)
-    if (index!=-1) {
+    if (index != -1) {
       inStr += index + ', '
       index++
     } else {
-      if (inStr) inStr = inStr.slice(0, inStr.length-2)
+      if (inStr) inStr = inStr.slice(0, inStr.length - 2)
       return inStr
     }
   }
 }
 
 console.log(strSymb("Hello friendl!", "l"));
+
