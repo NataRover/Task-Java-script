@@ -624,3 +624,20 @@ function text_3(str) {
     return midleStr;
 }
 console.log(text_3("gg fff rrrr"));
+//ЗАДАЧА-10
+console.log("Hello friend! Task-10(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+/*Написать функцию, которая принимает строку и символ
+и выводит индексы, по которым находится этот символ в
+строке. Также вывести, сколько всего раз встречается этот
+символ в строке.*/
+function strSymb(str, symb) {
+    var inStr = " ";
+    str = str.split(" ");
+    console.log(str);
+    for (var index_5 = 0; index_5 < str.length; index_5++) {
+        var element = str[index_5];
+        console.log(element);
+    }
+    return inStr;
+}
+console.log(strSymb("Hello friend!", "l"));

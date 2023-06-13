@@ -705,15 +705,16 @@ console.log("Hello friend! Task-10(строки) \u{1F642}");
 и выводит индексы, по которым находится этот символ в
 строке. Также вывести, сколько всего раз встречается этот
 символ в строке.*/
-function strSymb(str) {
-  str = str.split("");
-  console.log(str)
+function strSymb(str, symb) {
+  let inStr = " ";
+  str = str.split(" ");
+  console.log(str);
   for (let index = 0; index < str.length; index++) {
     const element = str[index];
     console.log(element)
-    element.charAt()
-    
+   
   }
+  return inStr;
 }
 
-console.log(strSymb("Hello friend!"));
+console.log(strSymb("Hello friend!", "l"));
