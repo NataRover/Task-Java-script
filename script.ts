@@ -706,7 +706,7 @@ console.log("Hello friend! Task-10(строки) \u{1F642}");
 символ в строке.*/
 function strSymb(str, symb) {
   let inStr = " ";
-  str = str.split(" ");
+  str = str.split("");//или " "?
   console.log(str);
   for (let index = 0; index < str.length; index++) {
     const element = str[index];

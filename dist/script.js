@@ -632,7 +632,7 @@ console.log("Hello friend! Task-10(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\
 символ в строке.*/
 function strSymb(str, symb) {
     var inStr = " ";
-    str = str.split(" ");
+    str = str.split(""); //или " "?
     console.log(str);
     for (var index_5 = 0; index_5 < str.length; index_5++) {
         var element = str[index_5];
