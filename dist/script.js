@@ -478,15 +478,13 @@ console.log("Hello friend! Task-1(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\u
 рой больше символов, чем в первой;или 0 – если строки
 одинаковой длины */
 function string(str1, str2) {
-    if (str1 > str2) {
+    if (str1.length > str2.length) {
         return 1;
     }
-    else if (str2 > str1) {
+    else if (str2.length > str1.length) {
         return -1;
     }
-    else if (str2 == str1) {
-        return 0;
-    }
+    return 0;
 }
 console.log(string("more", "butterfly"));
 //ЗАДАЧА-2
@@ -547,13 +545,13 @@ console.log("Hello friend! Task-5(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\u
 “Hello...” */
 function truncateString(str, num) {
     if (str.length > num) {
-        return str.slice(0, num) + "...";
+        return str.slice(0, num - 3) + "...";
     }
     else {
         return str;
     }
 }
-console.log(truncateString("Hello,world!", 5));
+console.log(truncateString("Hello,world!", 8));
 //ЗАДАЧА-6
 console.log("Hello friend! Task-6(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 /*Написать функцию, которая проверяет, является ли пере-
@@ -567,7 +565,7 @@ console.log(palindrome("annA"));
 console.log(palindrome("123321"));
 console.log(palindrome("art123art"));
 //2
-function palindrome(str) {
+function palindrome2(str) {
     var check = "";
     for (var i = str.length - 1; i >= 0; --i) {
         check += str[i];
@@ -593,7 +591,7 @@ console.log("Hello friend! Task-8(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\u
 //cлово из предложения.
 function txt_2(str) {
     str = str.split(" ");
-    var longeStr = " ";
+    var longeStr = "";
     for (var index_3 = 0; index_3 < str.length; index_3++) {
         var element = str[index_3];
         // console.log(element.length);
@@ -612,14 +610,14 @@ console.log("Hello friend! Task-9(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\u
 function text_3(str) {
     str = str.split(" ");
     // console.log(str.length);
-    var midleStr = " ";
-    var sumStr = " ";
+    var midleStr = 0;
+    var sumStr = 0;
     for (var index_4 = 0; index_4 < str.length; index_4++) {
         var element = str[index_4];
         // console.log(element);
+        sumStr = sumStr + element.length;
     }
-    sumStr = sumStr + element;
-    midleStr = midleStr + sumStr / str.length;
+    midleStr = sumStr / str.length;
     console.log(midleStr);
     return midleStr;
 }
@@ -631,13 +629,19 @@ console.log("Hello friend! Task-10(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\
 строке. Также вывести, сколько всего раз встречается этот
 символ в строке.*/
 function strSymb(str, symb) {
-    var inStr = " ";
-    str = str.split(""); //или " "?
-    console.log(str);
-    for (var index_5 = 0; index_5 < str.length; index_5++) {
-        var element = str[index_5];
-        console.log(str.lastIndexOf(element));
+    var inStr = "";
+    var index = 0;
+    while (true) {
+        index = str.indexOf(symb, index);
+        if (index != -1) {
+            inStr += index + ', ';
+            index++;
+        }
+        else {
+            if (inStr)
+                inStr = inStr.slice(0, inStr.length - 2);
+            return inStr;
+        }
     }
-    return inStr;
 }
-console.log(strSymb("Hello friend!", "l"));
+console.log(strSymb("Hello friendl!", "l"));

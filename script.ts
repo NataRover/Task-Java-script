@@ -533,13 +533,12 @@ console.log("Hello friend! Task-1(строки) \u{1F642}");
 рой больше символов, чем в первой;или 0 – если строки
 одинаковой длины */
 function string(str1, str2) {
-  if (str1 > str2) {
+  if (str1.length > str2.length) {
     return 1;
-  } else if (str2 > str1) {
+  } else if (str2.length > str1.length) {
     return -1;
-  } else if (str2 == str1) {
-    return 0;
-  }
+  } 
+  return 0;
 }
 console.log(string("more", "butterfly"));
 
@@ -614,12 +613,12 @@ console.log("Hello friend! Task-5(строки) \u{1F642}");
 
 function truncateString(str, num) {
   if (str.length > num) {
-    return str.slice(0, num) + "...";
+    return str.slice(0, num-3) + "...";
   } else {
     return str;
   }
 }
-console.log(truncateString("Hello,world!", 5));
+console.log(truncateString("Hello,world!", 8));
 
 //ЗАДАЧА-6
 console.log("Hello friend! Task-6(строки) \u{1F642}");
@@ -635,7 +634,7 @@ console.log(palindrome("annA"));
 console.log(palindrome("123321"));
 console.log(palindrome("art123art"));
 //2
-function palindrome(str) {
+function palindrome2(str) {
   let check = "";
   for (let i = str.length - 1; i >= 0; --i) {
     check += str[i];
@@ -664,7 +663,7 @@ console.log("Hello friend! Task-8(строки) \u{1F642}");
 //cлово из предложения.
 function txt_2(str) {
   str = str.split(" ");
-  let longeStr = " ";
+  let longeStr = "";
   for (let index = 0; index < str.length; index++) {
     const element = str[index];
     // console.log(element.length);
@@ -684,14 +683,14 @@ console.log("Hello friend! Task-9(строки) \u{1F642}");
 function text_3(str) {
   str = str.split(" ");
   // console.log(str.length);
-  let midleStr = " ";
-  let sumStr = " ";
+  let midleStr = 0;
+  let sumStr = 0;
   for (let index = 0; index < str.length; index++) {
     const element = str[index];
     // console.log(element);
+    sumStr = sumStr + element.length;
   }
-  sumStr = sumStr + element;
-  midleStr = midleStr + sumStr / str.length;
+  midleStr = sumStr / str.length;
   console.log(midleStr);
   return midleStr;
 }
@@ -704,16 +703,19 @@ console.log("Hello friend! Task-10(строки) \u{1F642}");
 и выводит индексы, по которым находится этот символ в
 строке. Также вывести, сколько всего раз встречается этот
 символ в строке.*/
-function strSymb(str, symb) {
-  let inStr = " ";
-  str = str.split("");//или " "?
-  console.log(str);
-  for (let index = 0; index < str.length; index++) {
-    const element = str[index];
-    console.log(str.lastIndexOf(element))
-   
+function strSymb(str:string, symb) {
+  let inStr = "";
+  let index = 0
+  while (true) {
+    index = str.indexOf(symb, index)
+    if (index!=-1) {
+      inStr += index + ', '
+      index++
+    } else {
+      if (inStr) inStr = inStr.slice(0, inStr.length-2)
+      return inStr
+    }
   }
-  return inStr;
 }
 
-console.log(strSymb("Hello friend!", "l"));
+console.log(strSymb("Hello friendl!", "l"));
