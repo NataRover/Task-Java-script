@@ -1009,13 +1009,12 @@
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
                                     function string(str1, str2) {<br>
-                                    if (str1 > str2) {<br>
+                                    if (str1.length > str2.length) {<br>
                                     return 1;<br>
-                                    } else if (str2 > str1) {<br>
+                                    } else if (str2.length > str1.length) {<br>
                                     return -1;<br>
-                                    } else if (str2 === str1) {<br>
+                                    } <br>
                                     return 0;<br>
-                                    }<br>
                                     }<br>
                                     console.log(string("more", "butterfly"));<br><br>
                                 </div>
@@ -1181,12 +1180,12 @@
                                     <p class="bg-warning d-inline">1.</p>
                                     function truncateString(str, num) {<br>
                                     if (str.length > num) {<br>
-                                    return str.slice(0, num) + "...";<br>
+                                    return str.slice(0, num-3) + "...";<br>
                                     } else {<br>
                                     return str;<br>
                                     }<br>
                                     }<br>
-                                    console.log(truncateString("Hello,world!", 5));<br><br>
+                                    console.log(truncateString("Hello,world!", 8));<br><br>
                                 </div>
                             </div>
                         </div>
@@ -1299,21 +1298,20 @@
                                 data-bs-parent="#accordionExample8">
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
-                                    function txt(str) {<br>
-                                    str = str.split(" ");<br>
-                                    let longeStr = " ";<br>
-                                    for (let index = 0; index < str.length; index++) { <br>
-                                        const element=str[index]; <br>
-                                        //
-                                        console.log(element.length); <br>
-                                        if (element.length> longeStr.length) {<br>
-                                        longeStr = element;<br>
-                                        }<br>
+                                    function txt_2(str) {<br>
+                                        str = str.split(" ");<br>
+                                        let longeStr = "";<br>
+                                        for (let index = 0; index < str.length; index++) {<br>
+                                          const element = str[index];<br>
+                                          // console.log(element.length);<br>
+                                          if (element.length > longeStr.length) {<br>
+                                            longeStr = element;<br>
+                                          }<br>
                                         }<br>
                                         return longeStr;<br>
-                                        }<br>
-                                        console.log(txt("May the force be with!"));<br>
-                                        console.log(txt("The quick brown fox jumps over the lazy dog"));<br><br>
+                                      }<br>
+                                      console.log(txt_2("May the force be with!"));<br>
+                                      console.log(txt_2("The quick brown fox jumps over the lazy dog"));<br><br>
                                 </div>
                             </div>
                         </div>
