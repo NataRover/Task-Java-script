@@ -642,7 +642,6 @@ function palindrome(str) {
   }
   return str == check;
 }
-
 console.log(palindrome("34543"));
 console.log(palindrome("345543"));
 console.log(palindrome("3"));
@@ -711,7 +710,7 @@ function strSymb(str, symb) {
   console.log(str);
   for (let index = 0; index < str.length; index++) {
     const element = str[index];
-    console.log(element)
+    console.log(str.lastIndexOf(element))
    
   }
   return inStr;

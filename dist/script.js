@@ -636,7 +636,7 @@ function strSymb(str, symb) {
     console.log(str);
     for (var index_5 = 0; index_5 < str.length; index_5++) {
         var element = str[index_5];
-        console.log(element);
+        console.log(str.lastIndexOf(element));
     }
     return inStr;
 }
