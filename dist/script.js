@@ -497,6 +497,11 @@ function upString(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
 console.log(upString("dracula"));
+//2
+function cursive_letter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+console.log(cursive_letter("dracula"));
 //ЗАДАЧА-3
 console.log("Hello friend! Task-3(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 /*Написать функцию, которая считает количество гласных
@@ -656,6 +661,22 @@ console.log(stringToarray("Каждый охотник желает знать")
 console.log("Hello friend! Task-12(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 //Напишите функцию delete_characters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
 function delete_characters(str, length) {
-    return str.slice(0, length);
+    return str.substr(0, length);
 }
 console.log(delete_characters("Каждый охотник желает знать", 7));
+//ЗАДАЧА-13
+console.log("Hello friend! Task-13(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию insert_dash(str), которая принимает строку str в качестве
+// аргумента и вставляет тире (-) между словами. При этом все символы строки необходимо перевести в верхний регистр.
+function insert_dash(str) {
+    return str.toUpperCase().replace(/\s/g, '-');
+}
+console.log(insert_dash("Каждый охотник желает знать"));
+//2
+function insert_dash_2(str) {
+    return str.toUpperCase().split(' ').join('-');
+}
+console.log(insert_dash_2("Каждый охотник желает знать"));
+//ЗАДАЧА-14
+console.log("Hello friend! Task-14(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с заглавной буквы.
