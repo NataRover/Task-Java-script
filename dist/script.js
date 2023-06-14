@@ -634,7 +634,7 @@ function strSymb(str, symb) {
     while (true) {
         index = str.indexOf(symb, index);
         if (index != -1) {
-            inStr += index + ', ';
+            inStr += index + ", ";
             index++;
         }
         else {
@@ -645,3 +645,19 @@ function strSymb(str, symb) {
     }
 }
 console.log(strSymb("Hello friendl!", "l"));
+//ЗАДАЧА-11
+console.log("Hello friend! Task-11(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию stringToarray(str), которая преобразует строку в массив слов.
+function stringToarray(str) {
+    return str.trim().split(" ");
+}
+console.log(stringToarray("Каждый охотник желает знать"));
+//ЗАДАЧА-12
+console.log("Hello friend! Task-12(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию delete_characters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
+function delete_characters(str, length) {
+    if (str.constructor === String && length > 0) {
+        return str.slice(0, length);
+    }
+}
+console.log(delete_characters("Каждый охотник желает знать", 7));

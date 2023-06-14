@@ -315,10 +315,10 @@ function itog(car) {
   if (result) {
     console.log(
       "У Вас неплохой автомобиль: " +
-      car.year +
-      " год выпуска, с пробегом " +
-      car.mileage +
-      " км."
+        car.year +
+        " год выпуска, с пробегом " +
+        car.mileage +
+        " км."
     );
   } else {
     console.log("Не будем говорить о Вашем автомобиле....");
@@ -706,18 +706,36 @@ console.log("Hello friend! Task-10(строки) \u{1F642}");
 символ в строке.*/
 function strSymb(str: string, symb) {
   let inStr = "";
-  let index = 0
+  let index = 0;
   while (true) {
-    index = str.indexOf(symb, index)
+    index = str.indexOf(symb, index);
     if (index != -1) {
-      inStr += index + ', '
-      index++
+      inStr += index + ", ";
+      index++;
     } else {
-      if (inStr) inStr = inStr.slice(0, inStr.length - 2)
-      return inStr
+      if (inStr) inStr = inStr.slice(0, inStr.length - 2);
+      return inStr;
     }
   }
 }
 
 console.log(strSymb("Hello friendl!", "l"));
+
+//ЗАДАЧА-11
+console.log("Hello friend! Task-11(строки) \u{1F642}");
+//Напишите функцию stringToarray(str), которая преобразует строку в массив слов.
+function stringToarray(str) {
+  return str.trim().split(" ");
+}
+console.log(stringToarray("Каждый охотник желает знать"));
+
+//ЗАДАЧА-12
+console.log("Hello friend! Task-12(строки) \u{1F642}");
+//Напишите функцию delete_characters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
+function delete_characters(str, length) {
+  if (str.constructor === String && length > 0) {
+    return str.slice(0, length);
+  }
+}
+console.log(delete_characters("Каждый охотник желает знать", 7));
 
