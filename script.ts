@@ -733,9 +733,7 @@ console.log(stringToarray("Каждый охотник желает знать")
 console.log("Hello friend! Task-12(строки) \u{1F642}");
 //Напишите функцию delete_characters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
 function delete_characters(str, length) {
-  if (str.constructor === String && length > 0) {
     return str.slice(0, length);
-  }
 }
 console.log(delete_characters("Каждый охотник желает знать", 7));
 

@@ -656,8 +656,6 @@ console.log(stringToarray("Каждый охотник желает знать")
 console.log("Hello friend! Task-12(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 //Напишите функцию delete_characters(str, length), которая возвращает подстроку, состоящую из указанного количества символов.
 function delete_characters(str, length) {
-    if (str.constructor === String && length > 0) {
-        return str.slice(0, length);
-    }
+    return str.slice(0, length);
 }
 console.log(delete_characters("Каждый охотник желает знать", 7));

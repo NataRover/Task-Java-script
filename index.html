@@ -25,7 +25,7 @@
 
     <div class="container-fluid  px-lg-5 py-3 mb-5 d-flex  gap-3 align-items-start justify-content-between">
         <!-- контент -->
-        <div class="tab-content col-10" id="v-pills-tabContent" >
+        <div class="tab-content col-10" id="v-pills-tabContent">
             <!-- обьекты -->
             <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
                 tabindex="0">
@@ -1472,11 +1472,9 @@
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
                                     function delete_characters(str, length) {<br>
-                                        if (str.constructor === String && length > 0) {<br>
-                                          return str.slice(0, length);<br>
-                                        }<br>
-                                      }<br>
-                                      console.log(delete_characters("Каждый охотник желает знать", 7));<br><br>
+                                    return str.slice(0, length);<br>
+                                    }<br>
+                                    console.log(delete_characters("Каждый охотник желает знать", 7));<br><br>
                                 </div>
                             </div>
                         </div>
@@ -1715,7 +1713,7 @@
         </div>
 
         <!-- боковая панель табов -->
-        <div class="nav flex-column nav-pills gap-2  align-items-end "  id="v-pills-tab" role="tablist"
+        <div class="nav flex-column nav-pills gap-2  align-items-end " id="v-pills-tab" role="tablist"
             aria-orientation="vertical">
 
             <button class="nav-link active bg-none p-2 text-bg-light border border-success bg-opacity-25"
