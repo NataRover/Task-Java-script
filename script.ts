@@ -760,11 +760,23 @@ console.log(insert_dash_2("Каждый охотник желает знать")
 console.log("Hello friend! Task-14(строки) \u{1F642}");
 //Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с заглавной буквы.
 function capitalize(str) {
-  let strArr = str.split(" ");
-  for (let index = 0; index < strArr.length; index++) {
-    const element = strArr[index];
-    element.charAt(0).toUpperCase() + str.slice(1)
-    return 
+  let str2 = "";
+  for (let index of str.split(" ")) {
+    str2 = str2 + String(index.replace(index[0], index[0].toUpperCase())) + " ";
   }
+  return str2;
+}
+console.log(capitalize("Каждый охотник желает знать"));
+
+//2
+function capitalize(str) {
+  const arr = str.split(" ");
+  const newArr = [];
+  arr.forEach((item) => {
+    const word = item[0].toUpperCase() + item.slice(1);
+    newArr.push(word);
+  });
+  const newString = newArr.join(" ");
+  return newString;
 }
 console.log(capitalize("Каждый охотник желает знать"));
