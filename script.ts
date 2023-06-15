@@ -558,7 +558,6 @@ function cursive_letter(str) {
 }
 console.log(cursive_letter("dracula"));
 
-
 //ЗАДАЧА-3
 console.log("Hello friend! Task-3(строки) \u{1F642}");
 /*Написать функцию, которая считает количество гласных
@@ -748,15 +747,24 @@ console.log("Hello friend! Task-13(строки) \u{1F642}");
 //Напишите функцию insert_dash(str), которая принимает строку str в качестве
 // аргумента и вставляет тире (-) между словами. При этом все символы строки необходимо перевести в верхний регистр.
 function insert_dash(str) {
-  return str.toUpperCase().replace(/\s/g, '-');
+  return str.toUpperCase().replace(/\s/g, "-");
 }
 console.log(insert_dash("Каждый охотник желает знать"));
 //2
 function insert_dash_2(str) {
-  return str.toUpperCase().split(' ').join('-');
+  return str.toUpperCase().split(" ").join("-");
 }
 console.log(insert_dash_2("Каждый охотник желает знать"));
 
 //ЗАДАЧА-14
 console.log("Hello friend! Task-14(строки) \u{1F642}");
 //Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с заглавной буквы.
+function capitalize(str) {
+  let strArr = str.split(" ");
+  for (let index = 0; index < strArr.length; index++) {
+    const element = strArr[index];
+    element.charAt(0).toUpperCase() + str.slice(1)
+    return 
+  }
+}
+console.log(capitalize("Каждый охотник желает знать"));
