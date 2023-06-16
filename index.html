@@ -980,6 +980,7 @@
                 tabindex="0">
                 <div class="">
                     <h2 class="text-secondary">Задачи по работе с строками</h2>
+                    <!-- ЗАДАНИЕ-1 -->
                     <h3>Задание 1</h3>
                     <p> Написать функцию, которая принимает 2 строки и сравнивает их длину.</p>
                     <div
@@ -1021,9 +1022,8 @@
                         </div>
                     </div>
                     <!-- ЗАДАНИЕ-2 -->
-
                     <h3 class="mt-5">Задание 2</h3>
-                    <p> </p>
+                    <p></p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
                         <p class="m-0"></p>
@@ -1315,7 +1315,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- ЗАДАНИЕ-9 -->
                     <h3 class="mt-5">Задание 9</h3>
                     <p> </p>
@@ -1359,7 +1358,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- ЗАДАНИЕ-10 -->
                     <h3 class="mt-5">Задание 10</h3>
                     <p> </p>
@@ -1406,7 +1404,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- ЗАДАНИЕ-11 -->
                     <h3 class="mt-5">Задание 11</h3>
                     <p>Допишите функцию... </p>
@@ -1509,43 +1506,67 @@
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
                                     function insert_dash(str) {<br>
-                                        return str.toUpperCase().replace(/\s/g, '-');<br>
-                                      }<br>
-                                      console.log(insert_dash("Каждый охотник желает знать"));<br><br>
-                                      <p class="bg-warning d-inline">2.</p>
-                                      function insert_dash_2(str) {<br>
-                                        return str.toUpperCase().split(' ').join('-');<br>
-                                      }<br>
-                                      console.log(insert_dash_2("Каждый охотник желает знать"));<br><br>
-                                      
+                                    return str.toUpperCase().replace(/\s/g, '-');<br>
+                                    }<br>
+                                    console.log(insert_dash("Каждый охотник желает знать"));<br><br>
+                                    <p class="bg-warning d-inline">2.</p>
+                                    function insert_dash_2(str) {<br>
+                                    return str.toUpperCase().split(' ').join('-');<br>
+                                    }<br>
+                                    console.log(insert_dash_2("Каждый охотник желает знать"));<br><br>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- ЗАДАНИЕ-11 -->
+                    <!-- ЗАДАНИЕ-14 -->
                     <h3 class="mt-5">Задание 14</h3>
-                    <p> </p>
+                    <p>Допишите функцию...</p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                        <p class="m-0"></p>
+                        <p class="m-0">
+                            function capitalize(str) { <br>
+                            // Ваш код <br>
+                            }</p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-
+                        Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с
+                        заглавной буквы.
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                    <div class="accordion" id="accordionExample11">
+                    <div class="accordion" id="accordionExample14">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne11" aria-expanded="true" aria-controls="collapseOne11">
+                                    data-bs-target="#collapseOne14" aria-expanded="true" aria-controls="collapseOne14">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne11" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample11">
+                            <div id="collapseOne14" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample14">
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
+                                    function capitalize(str) {<br>
+                                    let str2 = "";<br>
+                                    for (let index of str.split(" ")) {<br>
+                                    str2 = str2 + String(index.replace(index[0], index[0].toUpperCase())) + " ";<br>
+                                    }<br>
+                                    return str2;<br>
+                                    }<br>
+                                    console.log(capitalize("Каждый охотник желает знать"));<br><br>
+                                    <p class="bg-warning d-inline">2.</p>
+                                    function capitalize(str) {<br>
+                                    const arr = str.split(" ");<br>
+                                    const newArr = [];<br>
+                                    arr.forEach((item) => {<br>
+                                    const word = item[0].toUpperCase() + item.slice(1);<br>
+                                    newArr.push(word);<br>
+                                    });<br>
+                                    const newString = newArr.join(" ");<br>
+                                    return newString;<br>
+                                    }<br>
+                                    console.log(capitalize("Каждый охотник желает знать"));<br><br>
                                 </div>
                             </div>
                         </div>
