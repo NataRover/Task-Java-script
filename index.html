@@ -1663,28 +1663,47 @@
                     </div>
                     <!-- ЗАДАНИЕ-17 -->
                     <h3 class="mt-5">Задание 17</h3>
-                    <p> </p>
+                    <p>Допишите функцию...</p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                        <p class="m-0"></p>
+                        <p class="m-0">function zeros (num, len, sign) {<br>
+                            ...ваш код...<br>
+                            };</p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-
+                        Напишите функцию zeros(num, len, sign), которая дополняет нулями до указаной длины числовое
+                        значение с дополнительным знаком «+» или « -« в зависимости от передаваемого аргумента.
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                    <div class="accordion" id="accordionExample11">
+                    <div class="accordion" id="accordionExample17">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne11" aria-expanded="true" aria-controls="collapseOne11">
+                                    data-bs-target="#collapseOne17" aria-expanded="true" aria-controls="collapseOne17">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne11" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample11">
+                            <div id="collapseOne17" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample17">
                                 <div class="accordion-body">
-                                    <p class="bg-warning d-inline">1.</p>
+                                    <p class="bg-warning d-inline px-1">1.</p>
+                                    function zeros(num, len, sign) {<br>
+                                    let len_zer = len - (num + "").length, // к-во нулей<br>
+                                    num_zer = "";<br>
+                                    for (; len_zer > 0; len_zer--) {<br>
+                                    num_zer += 0;<br>
+                                    }<br>
+
+                                    return sign === undefined || sign === ""
+                                    ? num_zer + num + ""
+                                    : sign + num_zer + num + "";<br>
+                                    }<br>
+
+                                    console.log(zeros(145, 5, "-")); // -00145<br>
+                                    console.log(zeros(33, 4, "+")); // +0033<br>
+                                    console.log(zeros(33, 4)); // 0033<br><br>
+
                                 </div>
                             </div>
                         </div>
