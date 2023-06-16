@@ -1571,30 +1571,55 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ЗАДАНИЕ-11 -->
+                    <!-- ЗАДАНИЕ-15 -->
                     <h3 class="mt-5">Задание 15</h3>
-                    <p> </p>
+                    <p>Допишите функцию... </p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                        <p class="m-0"></p>
+                        <p class="m-0">function change_register(str) {<br>
+                            // Ваш код<br>
+                            }</p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-
+                        Напишите функцию change_register(str), которая принимает в качестве аргумента строку и и
+                        заменяет регистр каждого символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК»,
+                        то на выходе должно быть «кАжДыЙ оХоТнИк».
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
                     <div class="accordion" id="accordionExample11">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne11" aria-expanded="true" aria-controls="collapseOne11">
+                                    data-bs-target="#collapseOne15" aria-expanded="true" aria-controls="collapseOne15">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne11" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample11">
+                            <div id="collapseOne15" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample15">
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline">1.</p>
+                                    function change_register(str) {<br>
+                                    let new_str = "";<br>
+                                    for (let index = 0; index < str.length; index++) { <br>
+                                        const element=str[index];<br>
+                                        if (element==element.toUpperCase()) { <br>
+                                        new_str=new_str + element.toLowerCase(); }<br>
+                                        else { new_str=new_str + element.toUpperCase();<br>
+                                        } <br>
+                                        }<br>
+                                        return new_str; }<br>
+                                        console.log(change_register("кАжДыЙ оХоТнИк ЖеЛаЕт ЗнАтЬ")); <br><br>
+                                        <p class="bg-warning d-inline">2.</p>
+                                        function change_register_2(str) {<br>
+                                        let new_str = "";<br>
+                                        for (let elem of str) {<br>
+                                        new_str = new_str + elem === elem.toUpperCase() ? elem.toLowerCase() :
+                                        elem.toUpperCase();<br>
+                                        }<br>
+                                        return new_str;<br>
+                                        }<br>
+                                        console.log(change_register("КАЖДЫЙ оХоТнИк ЖеЛаЕт ЗнАтЬ"));<br><br>
                                 </div>
                             </div>
                         </div>

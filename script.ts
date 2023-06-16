@@ -780,3 +780,33 @@ function capitalize(str) {
   return newString;
 }
 console.log(capitalize("Каждый охотник желает знать"));
+
+//ЗАДАЧА-15
+console.log("Hello friend! Task-15(строки) \u{1F642}");
+// Напишите функцию change_register(str), которая принимает в качестве аргумента строку и и заменяет регистр каждого символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК», то на выходе должно быть «кАжДыЙ оХоТнИк».
+function change_register(str) {
+  let new_str = "";
+  for (let index = 0; index < str.length; index++) {
+    const element = str[index];
+    if (element == element.toUpperCase()) {
+      new_str = new_str + element.toLowerCase();
+    } else {
+      new_str = new_str + element.toUpperCase();
+    }
+  }
+  return new_str;
+}
+console.log(change_register("кАжДыЙ оХоТнИк ЖеЛаЕт ЗнАтЬ"));
+
+//2
+function change_register_2(str) {
+  let new_str = "";
+  for (let elem of str) {
+    new_str =
+      new_str + elem === elem.toUpperCase()
+        ? elem.toLowerCase()
+        : elem.toUpperCase();
+  }
+  return new_str;
+}
+console.log(change_register("КАЖДЫЙ оХоТнИк ЖеЛаЕт ЗнАтЬ"));
