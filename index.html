@@ -1598,7 +1598,7 @@
                             <div id="collapseOne15" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample15">
                                 <div class="accordion-body">
-                                    <p class="bg-warning d-inline">1.</p>
+                                    <p class="bg-warning d-inline px-1">1.</p>
                                     function change_register(str) {<br>
                                     let new_str = "";<br>
                                     for (let index = 0; index < str.length; index++) { <br>
@@ -1610,7 +1610,7 @@
                                         }<br>
                                         return new_str; }<br>
                                         console.log(change_register("кАжДыЙ оХоТнИк ЖеЛаЕт ЗнАтЬ")); <br><br>
-                                        <p class="bg-warning d-inline">2.</p>
+                                        <p class="bg-warning d-inline px-1">2.</p>
                                         function change_register_2(str) {<br>
                                         let new_str = "";<br>
                                         for (let elem of str) {<br>
@@ -1624,35 +1624,44 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ЗАДАНИЕ-11 -->
+                    <!-- ЗАДАНИЕ-16 -->
                     <h3 class="mt-5">Задание 16</h3>
-                    <p> </p>
+                    <p>Допишите функцию... </p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                        <p class="m-0"></p>
+                        <p class="m-0">function remove_char(str) {<br>
+                            ...ваш код...<br>
+                            };</p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-
+                        Напишите функцию remove_char(str), которая возвращает строку, очищенную от всех не
+                        буквенно-цифровых символов.
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                    <div class="accordion" id="accordionExample11">
+                    <div class="accordion" id="accordionExample16">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne11" aria-expanded="true" aria-controls="collapseOne11">
+                                    data-bs-target="#collapseOne16" aria-expanded="true" aria-controls="collapseOne16">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne11" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample11">
+                            <div id="collapseOne16" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample16">
                                 <div class="accordion-body">
-                                    <p class="bg-warning d-inline">1.</p>
+                                    <p class="bg-warning d-inline px-1">1.</p>
+                                    function remove_char(str) {<br>
+                                    let new_str = "";<br>
+                                    new_str = str.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");<br>
+                                    return new_str;<br>
+                                    }<br>
+                                    console.log(remove_char("every hunter wishes to know"));<br><br>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- ЗАДАНИЕ-11 -->
+                    <!-- ЗАДАНИЕ-17 -->
                     <h3 class="mt-5">Задание 17</h3>
                     <p> </p>
                     <div
