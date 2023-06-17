@@ -894,7 +894,7 @@ function initCap_2(str) {
     .trim()
     .split(" ")
     .map((s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase())
-    .join("");
+    .join("_");
 }
 console.log(initCap_2("hEllo woRld")); // HelloWorld
 
@@ -907,3 +907,18 @@ function initCap_3(str) {
   return str2;
 }
 console.log(initCap_3("hEllo woRld")); // HelloWorld
+
+//ЗАДАЧА-21
+console.log("Hello friend! Task-21(строки) \u{1F642}");
+//Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case,
+// при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
+
+function initSnake(str) {
+ // Заменяем все заглавные буквы символом подчеркивания (_), а затем строчными буквами
+let new_str= str.replace(/[A-Z]/g, function (letter) {
+  return '_' + letter.toLowerCase();
+});
+// Удаляем символ подчеркивания (_) в начале строки
+return new_str.replace(/^_/, "");
+}
+console.log(initSnake("HelloWorld")); // hello_world

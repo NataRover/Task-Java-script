@@ -1860,26 +1860,43 @@
                     <p>Допишите функцию... </p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                        <p class="m-0"></p>
+                        <p class="m-0">
+                            function initSnake(str) {<br>
+                            //ваш код...<br>
+                            }<br>
+                            console.log(initSnake("HelloWorld")); // hello_world
+                        </p>
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-
+                        Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из
+                        CamelCase в snake_case,
+                        при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с
+                        маленькой буквы.
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                    <div class="accordion" id="accordionExample19">
+                    <div class="accordion" id="accordionExample21">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne19" aria-expanded="true" aria-controls="collapseOne19">
+                                    data-bs-target="#collapseOne21" aria-expanded="true" aria-controls="collapseOne21">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne19" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample19">
+                            <div id="collapseOne21" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample21">
                                 <div class="accordion-body">
                                     <p class="bg-warning d-inline px-1">1.</p>
-
+                                    function initSnake(str) {<br>
+                                    // Заменяем все заглавные буквы символом подчеркивания (_), а затем строчными
+                                    буквами<br>
+                                    let new_str= str.replace(/[A-Z]/g, function (letter) {<br>
+                                    return '_' + letter.toLowerCase();<br>
+                                    });<br>
+                                    // Удаляем символ подчеркивания (_) в начале строки<br>
+                                    return new_str.replace(/^_/, "");<br>
+                                    }<br>
+                                    console.log(initSnake("HelloWorld")); // hello_world<br><br>
                                 </div>
                             </div>
                         </div>
