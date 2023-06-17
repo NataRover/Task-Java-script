@@ -757,3 +757,59 @@ function zeros(num, len, sign) {
 console.log(zeros(145, 5, "-")); // -00145
 console.log(zeros(33, 4, "+")); // +0033
 console.log(zeros(33, 4)); // 0033
+// const my_num = prompt();
+// function evenOdd() {
+//   return ["Четное", "Не четное"][(my_num * my_num) % 2];
+// }
+// alert(evenOdd());
+//ЗАДАЧА-18
+console.log("Hello friend! Task-18(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
+function comparison(str1, str2) {
+    var new_str = str1.toUpperCase() === str2.toUpperCase();
+    return new_str;
+}
+console.log(comparison("string", "StRiNg")); // true
+console.log(comparison("ABCDe", "AbcdW")); // false
+//ЗАДАЧА-19
+console.log("Hello friend! Task-19(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию insensitive_search(str1, str2),
+//которая осуществляет поиск подстроки str2 в строке str1 без учёта регистра символов.
+function insensitive_search(str1, str2) {
+    var search_str = new RegExp(str2, "ig");
+    var result = str1.search(search_str);
+    return result > 0 ? "Соответствует" : "Не соответствует";
+}
+console.log(insensitive_search("Изучаю JavaScript", "javascript"));
+// Соответствует
+console.log(insensitive_search("Изучаю JavaScript", "javascriptS"));
+// Не соответствует
+//ЗАДАЧА-20
+console.log("Hello friend! Task-20(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+//Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в CamelCase,
+//при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки пишется с заглавной буквы.
+function initCap(str) {
+    return str.toLowerCase().replace(/(?:^|\s)[a-z]/g, function (m) {
+        return m.toUpperCase().replace(/\s+/g, "");
+    });
+}
+console.log(initCap("hEllo woRld")); // HelloWorld
+//2
+function initCap_2(str) {
+    return str
+        .trim()
+        .split(" ")
+        .map(function (s) { return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase(); })
+        .join("");
+}
+console.log(initCap_2("hEllo woRld")); // HelloWorld
+//3
+function initCap_3(str) {
+    var str2 = "";
+    for (var _i = 0, _a = str.split(" "); _i < _a.length; _i++) {
+        var s = _a[_i];
+        str2 = str2 + s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+    }
+    return str2;
+}
+console.log(initCap_3("hEllo woRld")); // HelloWorld

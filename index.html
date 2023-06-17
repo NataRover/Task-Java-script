@@ -23,7 +23,7 @@
         </div>
     </header>
 
-    <div class="container-fluid  px-lg-5 py-3 mb-5 d-flex  align-items-start justify-content-between gap-1">
+    <div class="container-fluid  px-lg-5 py-3 mb-5 d-flex  align-items-start justify-content-between gap-3">
         <!-- контент -->
         <div class="tab-content " id="v-pills-tabContent">
             <!-- обьекты -->
@@ -1708,9 +1708,156 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ЗАДАНИЕ-11 -->
+                    <!-- ЗАДАНИЕ-18 -->
                     <h3 class="mt-5">Задание 18</h3>
-                    <p> </p>
+                    <p>Допишите функцию... </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+                        <p class="m-0">function comparison(str1, str2) {<br>
+                            //ваш код<br>
+                            }<br>
+                            console.log(comparison("string", "StRiNg")); // true<br>
+                            console.log(comparison("ABCDe", "AbcdW")); // false</p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample18">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne18" aria-expanded="true" aria-controls="collapseOne18">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne18" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample18">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline px-1">1.</p>
+                                    function comparison(str1, str2) {<br>
+                                    const new_str = str1.toUpperCase() === str2.toUpperCase();<br>
+                                    return new_str;<br>
+                                    }<br>
+                                    console.log(comparison("string", "StRiNg")); // true<br>
+                                    console.log(comparison("ABCDe", "AbcdW")); // false<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ЗАДАНИЕ-19 -->
+                    <h3 class="mt-5">Задание 19</h3>
+                    <p>Допишите функцию... </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+                        <p class="m-0">
+                            function insensitive_search(str1, str2) {<br>
+                            //ваш код<br>
+                            }<br>
+                            console.log(insensitive_search("Изучаю JavaScript", "javascript"));
+                            // Соответствует<br>
+                            console.log(insensitive_search("Изучаю JavaScript", "javascriptS"));
+                            // Не соответствует<br>
+                        </p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Напишите функцию insensitive_search(str1, str2),
+                        которая осуществляет поиск подстроки str2 в строке str1 без учёта регистра символов.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample19">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne19" aria-expanded="true" aria-controls="collapseOne19">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne19" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample19">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline px-1">1.</p>
+                                    function insensitive_search(str1, str2) {<br>
+                                    let search_str = new RegExp(str2, "ig");<br>
+                                    let result = str1.search(search_str);<br>
+
+                                    return result > 0 ? "Соответствует" : "Не соответствует";<br>
+                                    }<br>
+                                    console.log(insensitive_search("Изучаю JavaScript", "javascript"));
+                                    // Соответствует<br>
+                                    console.log(insensitive_search("Изучаю JavaScript", "javascriptS"));
+                                    // Не соответствует<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-20 -->
+                    <h3 class="mt-5">Задание 20</h3>
+                    <p>Допишите функцию... </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+                        <p class="m-0">
+                            function initCap(str) {<br>
+                            //ваш код<br>
+                            }<br>
+                            console.log(initCap("hEllo woRld")); // HelloWorld
+                        </p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                        Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в
+                        CamelCase,
+                        при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки
+                        пишется с заглавной буквы.
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample20">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne20" aria-expanded="true" aria-controls="collapseOne20">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne20" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample20">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline px-1">1.</p>
+                                    function initCap(str) {<br>
+                                    return str.toLowerCase().replace(/(?:^|\s)[a-z]/g, function (m) {<br>
+                                    return m.toUpperCase().replace(/\s+/g, "");<br>
+                                    });<br>
+                                    }<br>
+                                    console.log(initCap("hEllo woRld")); // HelloWorld<br><br>
+                                    <p class="bg-warning d-inline px-1">2.</p>
+                                    function initCap_2(str) {<br>
+                                    return str
+                                    .trim()
+                                    .split(" ")
+                                    .map((s) => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase())
+                                    .join("");<br>
+                                    }<br>
+                                    console.log(initCap_2("hEllo woRld")); // HelloWorld<br><br>
+
+                                    <p class="bg-warning d-inline px-1">3.</p>
+                                    function initCap_3(str) {<br>
+                                    let str2 = "";<br>
+                                    for (let s of str.split(" ")) {<br>
+                                    str2 = str2 + s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();<br>
+                                    }<br>
+                                    return str2;<br>
+                                    }<br>
+                                    console.log(initCap_3("hEllo woRld")); // HelloWorld<br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-21 -->
+                    <h3 class="mt-5">Задание 21</h3>
+                    <p>Допишите функцию... </p>
                     <div
                         class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
                         <p class="m-0"></p>
@@ -1720,22 +1867,82 @@
 
                     </p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
-                    <div class="accordion" id="accordionExample11">
+                    <div class="accordion" id="accordionExample19">
                         <div class="accordion-item border-3 ">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne11" aria-expanded="true" aria-controls="collapseOne11">
+                                    data-bs-target="#collapseOne19" aria-expanded="true" aria-controls="collapseOne19">
                                     Решение
                                 </button>
                             </h2>
-                            <div id="collapseOne11" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionExample11">
+                            <div id="collapseOne19" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample19">
                                 <div class="accordion-body">
-                                    <p class="bg-warning d-inline">1.</p>
+                                    <p class="bg-warning d-inline px-1">1.</p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- ЗАДАНИЕ-22-->
+                    <h3 class="mt-5">Задание 22</h3>
+                    <p>Допишите функцию... </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample19">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne19" aria-expanded="true" aria-controls="collapseOne19">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne19" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample19">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline px-1">1.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ЗАДАНИЕ-23 -->
+                    <h3 class="mt-5">Задание 23</h3>
+                    <p>Допишите функцию... </p>
+                    <div
+                        class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+                        <p class="m-0"></p>
+                    </div>
+                    <p
+                        class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+
+                    </p>
+                    <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                    <div class="accordion" id="accordionExample19">
+                        <div class="accordion-item border-3 ">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne19" aria-expanded="true" aria-controls="collapseOne19">
+                                    Решение
+                                </button>
+                            </h2>
+                            <div id="collapseOne19" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample19">
+                                <div class="accordion-body">
+                                    <p class="bg-warning d-inline px-1">1.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!-- массивы-->
