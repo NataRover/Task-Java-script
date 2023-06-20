@@ -118,7 +118,8 @@ var myArr = [888, 9999, 3, 78, 11];
 // без повторений.
 function newArr(arr_1, arr_2) {
     var arr_3 = arr_1.concat(arr_2);
-    return arr_3;
+    var unique = Array.from(new Set(arr_3));
+    return unique;
 }
 console.log(newArr([4, 5, 6], [7, 6, 9]));
 //2

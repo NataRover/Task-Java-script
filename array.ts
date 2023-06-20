@@ -122,8 +122,9 @@ const myArr = [888, 9999, 3, 78, 11];
 // сив, в котором собраны все элементы из двух массивов
 // без повторений.
 function newArr(arr_1, arr_2) {
-  const arr_3 = arr_1.concat(arr_2);
-  return arr_3;
+  let arr_3 = arr_1.concat(arr_2);
+  let unique = Array.from(new Set(arr_3));
+  return unique;
 }
 console.log(newArr([4, 5, 6], [7, 6, 9]));
 
