@@ -842,11 +842,6 @@ console.log(zeros(145, 5, "-")); // -00145
 console.log(zeros(33, 4, "+")); // +0033
 console.log(zeros(33, 4)); // 0033
 
-// const my_num = prompt();
-// function evenOdd() {
-//   return ["Четное", "Не четное"][(my_num * my_num) % 2];
-// }
-// alert(evenOdd());
 
 //ЗАДАЧА-18
 console.log("Hello friend! Task-18(строки) \u{1F642}");
