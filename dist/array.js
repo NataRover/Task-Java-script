@@ -160,10 +160,15 @@ console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-3 \uD83D\uDE42");
 //Поиск фрукта в массиве. Функция принимает название
 //фрукта и возвращает индекс найденного элемента или -1,
 //если не найден. Поиск должен быть нерегистрозависимым.
-var fruits = ["apple", "pinia", "potato", "orange", "meelon", "tomato"];
+var fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
 fruits.sort();
 console.log(fruits);
 for (var _i = 0, fruits_1 = fruits; _i < fruits_1.length; _i++) {
     fruit = fruits_1[_i];
     console.log("<ul><li>" + fruit + "</li></ul>");
 }
+function searchFruit(fruit) {
+    return fruits.indexOf(fruit) != -1;
+}
+console.log(searchFruit("orange"));
+console.log(searchFruit("cucumber"));

@@ -173,9 +173,14 @@ console.log("Задание-3 \u{1F642}");
 //фрукта и возвращает индекс найденного элемента или -1,
 //если не найден. Поиск должен быть нерегистрозависимым.
 
-let fruits = ["apple", "pinia", "potato", "orange", "meelon", "tomato"];
+let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
 fruits.sort();
 console.log(fruits);
 for (fruit of fruits) {
   console.log(`<ul><li>${fruit}</li></ul>`);
 }
+function searchFruit(fruit) {
+  return fruits.indexOf(fruit) != -1;
+}
+console.log(searchFruit("orange"));
+console.log(searchFruit("cucumber"));
