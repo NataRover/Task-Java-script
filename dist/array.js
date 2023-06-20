@@ -2,7 +2,7 @@
 // function evenOdd() {
 //   const arr = ["Четное", "Не четное"]
 //   return arr[(my_num * my_num) % 2]
-//   return my_num%2 && 'odd' || 'even'
+//   return my_num % 2 && 'odd' || 'even'
 // }
 // alert(evenOdd());
 //MACCИВЫ
@@ -90,8 +90,8 @@ console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-5\uD83D\uDE42");
 // Функция добавления нового элемента в массив по ука-
 // занному индексу.
 function addElem(myArr, indexElem, elem) {
-    if (indexElem > (myArr.length) || indexElem < 0)
-        return 'Bad index';
+    if (indexElem > myArr.length || indexElem < 0)
+        return "Bad index";
     myArr.splice(indexElem, 0, elem);
     return myArr;
 }
@@ -113,10 +113,12 @@ function deleteElem(index) {
 deleteElem(1);
 console.log(arr_2);
 //Задание 2
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-2 \uD83D\uDE42");
 /* Создать еще один массив из 5 случайных чисел и написать
 следующие функции.*/
-var myArr = [888, 9999, 3, 78, 11];
+var myArr = [888, 9999, 3, 78, 91];
 //1
+console.log("1\uD83D\uDE42");
 // Функция принимает 2 массива и возвращает новый мас-
 // сив, в котором собраны все элементы из двух массивов
 // без повторений.
@@ -127,21 +129,41 @@ function newArr(arr_1, arr_2) {
 }
 console.log(newArr(myArr, arr_2));
 //2
+console.log("2 \uD83D\uDE42");
 // Функция принимает 2 массива и возвращает новый массив,
 // в котором собраны общие элементы (то есть элементы,
 // которые встречаются и в первом и во втором массивах)
 // без повторений.
+function newArr_2(arr_1, arr_2) {
+    var intersection = arr_1.filter(function (num) { return arr_2.includes(num); });
+    return intersection;
+}
+console.log(newArr_2(myArr, arr_2));
 //3
+console.log("3 \uD83D\uDE42");
 // Функция принимает 2 массива и возвращает новый мас-
 // сив, в котором собраны все элементы из первого массива,
 // которых нет во втором массиве.
+function newArr_3(arr_1, arr_2) {
+    var difference = arr_1.filter(function (num) { return !arr_2.includes(num); });
+    return difference;
+}
+console.log(newArr_3(myArr, arr_2));
 // Задание 3
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-3 \uD83D\uDE42");
 /*Создать массив фруктов и отсортировать его по алфавиту.
-Написать следующие функции.*/
+ Написать следующие функции.*/
 //1
-// Создать массив фруктов и отсортировать его по алфавиту.
-// Написать следующие функции.
+//Вывод на экран с помощью document.write() в виде списка
+//(с помощью тегов ul и li).
 //2
-// Поиск фрукта в массиве. Функция принимает название
-// фрукта и возвращает индекс найденного элемента или -1,
-// если не найден. Поиск должен быть нерегистрозависимым.
+//Поиск фрукта в массиве. Функция принимает название
+//фрукта и возвращает индекс найденного элемента или -1,
+//если не найден. Поиск должен быть нерегистрозависимым.
+var fruits = ["apple", "pinia", "potato", "orange", "meelon", "tomato"];
+fruits.sort();
+console.log(fruits);
+for (var _i = 0, fruits_1 = fruits; _i < fruits_1.length; _i++) {
+    fruit = fruits_1[_i];
+    console.log("<ul><li>" + fruit + "</li></ul>");
+}

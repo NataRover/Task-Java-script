@@ -1,9 +1,8 @@
-
 // const my_num = prompt();
 // function evenOdd() {
 //   const arr = ["Четное", "Не четное"]
 //   return arr[(my_num * my_num) % 2]
-//   return my_num%2 && 'odd' || 'even'
+//   return my_num % 2 && 'odd' || 'even'
 // }
 // alert(evenOdd());
 
@@ -33,8 +32,7 @@ function evenArr(myArr: any[]) {
   return myNewArr;
 }
 
-
-  console.log(evenArr([1, 3, 4, 5, 6, 7, 8, 91, 2, 3]));
+console.log(evenArr([1, 3, 4, 5, 6, 7, 8, 91, 2, 3]));
 // другое решение
 function evenArr_2(myArr) {
   const newArr = [] as any[];
@@ -93,8 +91,8 @@ console.log(arrayMax([5555, 8, 91, 3]));
 console.log("Задание-5\u{1F642}");
 // Функция добавления нового элемента в массив по ука-
 // занному индексу.
-function addElem(myArr,indexElem, elem) {
-  if (indexElem>(myArr.length)||indexElem<0) return 'Bad index'
+function addElem(myArr, indexElem, elem) {
+  if (indexElem > myArr.length || indexElem < 0) return "Bad index";
   myArr.splice(indexElem, 0, elem);
   return myArr;
 }
@@ -103,7 +101,7 @@ console.log(addElem([1, 3, 4, 5, 6, 7, 8, 91, 2, 3], 8, 88));
 
 //другое решение !NO
 
-function addElem_2(arr,index, element) {
+function addElem_2(arr, index, element) {
   arr[index] = element;
 }
 addElem_2([1, 3, 4, 5, 6, 7, 8, 91, 2, 3], 9, 999);
@@ -114,16 +112,18 @@ console.log("Задание-6\u{1F642}");
 // индексу.
 const arr_2 = [1, 3, 4, 5, 6, 7, 8, 91, 2, 3];
 function deleteElem(index) {
-  arr_2.splice(index,1);
+  arr_2.splice(index, 1);
 }
 deleteElem(1);
 console.log(arr_2);
 
 //Задание 2
+console.log("Задание-2 \u{1F642}");
 /* Создать еще один массив из 5 случайных чисел и написать
 следующие функции.*/
-const myArr = [888, 9999, 3, 78, 11];
+const myArr = [888, 9999, 3, 78, 91];
 //1
+console.log("1\u{1F642}");
 // Функция принимает 2 массива и возвращает новый мас-
 // сив, в котором собраны все элементы из двух массивов
 // без повторений.
@@ -135,25 +135,47 @@ function newArr(arr_1, arr_2) {
 console.log(newArr(myArr, arr_2));
 
 //2
+console.log("2 \u{1F642}");
 // Функция принимает 2 массива и возвращает новый массив,
 // в котором собраны общие элементы (то есть элементы,
 // которые встречаются и в первом и во втором массивах)
 // без повторений.
+function newArr_2(arr_1, arr_2) {
+  let intersection = arr_1.filter((num) => arr_2.includes(num));
+  return intersection;
+}
+console.log(newArr_2(myArr, arr_2));
 
 //3
+console.log("3 \u{1F642}");
 // Функция принимает 2 массива и возвращает новый мас-
 // сив, в котором собраны все элементы из первого массива,
 // которых нет во втором массиве.
 
+function newArr_3(arr_1, arr_2) {
+  let difference = arr_1.filter((num) => !arr_2.includes(num));
+  return difference;
+}
+console.log(newArr_3(myArr, arr_2));
+
 // Задание 3
+console.log("Задание-3 \u{1F642}");
+
 /*Создать массив фруктов и отсортировать его по алфавиту.
-Написать следующие функции.*/
+ Написать следующие функции.*/
 
 //1
-// Создать массив фруктов и отсортировать его по алфавиту.
-// Написать следующие функции.
+//Вывод на экран с помощью document.write() в виде списка
+//(с помощью тегов ul и li).
 
 //2
-// Поиск фрукта в массиве. Функция принимает название
-// фрукта и возвращает индекс найденного элемента или -1,
-// если не найден. Поиск должен быть нерегистрозависимым.
+//Поиск фрукта в массиве. Функция принимает название
+//фрукта и возвращает индекс найденного элемента или -1,
+//если не найден. Поиск должен быть нерегистрозависимым.
+
+let fruits = ["apple", "pinia", "potato", "orange", "meelon", "tomato"];
+fruits.sort();
+console.log(fruits);
+for (fruit of fruits) {
+  console.log(`<ul><li>${fruit}</li></ul>`);
+}
