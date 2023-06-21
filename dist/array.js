@@ -168,7 +168,318 @@ for (var _i = 0, fruits_1 = fruits; _i < fruits_1.length; _i++) {
     console.log("<ul><li>" + fruit + "</li></ul>");
 }
 function searchFruit(fruit) {
-    return fruits.indexOf(fruit) != -1;
+    return fruits.indexOf(fruit.toLowerCase()) != -1;
 }
-console.log(searchFruit("orange"));
+console.log(searchFruit("Orange"));
 console.log(searchFruit("cucumber"));
+console.log(searchFruit("poTato"));
+// Задание 4
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-4 \uD83D\uDE42");
+/*Создать массив «Список покупок». Каждый элемент массива
+является объектом, который содержит название продукта, необ-
+ходимое количество и куплен или нет. Написать несколько функ-
+ций для работы с таким массивом.
+1
+Вывод всего списка на экран таким образом, чтобы сначала
+шли некупленные продукты, а потом – купленные.
+2
+Добавление покупки в список. Учтите, что при добавлении
+покупки с уже существующим в списке продуктом, необ-
+ходимо увеличивать количество в существующей покупке,
+а не добавлять новую.
+3
+Покупка продукта. Функция принимает название продукта
+и отмечает его как купленный.*/
+var purchase = [
+    {
+        name: "a",
+        count: 12,
+        purchased: true
+    },
+    {
+        name: "b",
+        count: 6,
+        purchased: false
+    },
+    {
+        name: "c",
+        count: 1,
+        purchased: true
+    },
+];
+var addPurchaseButton = document.querySelector(".addPurchase");
+var setPurchasedButton = document.querySelector(".setPurchased");
+function whatToBuy(arr) {
+    var n = 1;
+    for (var _i = 0, arr_4 = arr; _i < arr_4.length; _i++) {
+        var el = arr_4[_i];
+        if (!el.purchased) {
+            console.log(n + ". " + el.name + " \u041D\u0430\u0434\u043E \u043A\u0443\u043F\u0438\u0442\u044C " + el.count + " \u0448\u0442\u0443\u043A");
+            n++;
+            // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")
+        }
+    }
+    for (var _a = 0, arr_5 = arr; _a < arr_5.length; _a++) {
+        var el = arr_5[_a];
+        if (el.purchased) {
+            console.log(n + ". " + el.name + " \u041A\u0443\u043F\u043B\u0435\u043D\u043E " + el.count + " \u0448\u0442\u0443\u043A");
+            n++;
+            // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")
+        }
+    }
+}
+function addPurchase() {
+    var name = prompt("Введите название");
+    var count = +prompt("Введите количество");
+    var find = false;
+    for (var _i = 0, purchase_1 = purchase; _i < purchase_1.length; _i++) {
+        var el = purchase_1[_i];
+        if (el.name == name) {
+            el.count += count;
+            find = true;
+        }
+    }
+    if (!find) {
+        purchase.push({ name: name, count: count, purchased: false });
+    }
+    whatToBuy(purchase);
+}
+function setPurchased() {
+    var name = prompt("Введите название купленного товара");
+    for (var _i = 0, purchase_2 = purchase; _i < purchase_2.length; _i++) {
+        var el = purchase_2[_i];
+        if (el.name == name) {
+            el.purchased = true;
+        }
+    }
+    whatToBuy(purchase);
+}
+addPurchaseButton === null || addPurchaseButton === void 0 ? void 0 : addPurchaseButton.addEventListener("click", addPurchase);
+setPurchasedButton === null || setPurchasedButton === void 0 ? void 0 : setPurchasedButton.addEventListener("click", setPurchased);
+whatToBuy(purchase);
+// Задание 5
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-5 \uD83D\uDE42");
+/*Создать массив, описывающий чек в магазине. Каждый эле-
+мент массива состоит из названия товара, количества и цены за
+единицу товара. Написать следующие функции.
+1
+Распечатка чека на экран.
+2
+Подсчет общей суммы покупки.
+3
+Получение самой дорогой покупки в чеке.
+4
+Подсчет средней стоимости одного товара в чеке.*/
+var cheque = [
+    {
+        name: "a",
+        count: 1,
+        price: 10
+    },
+    {
+        name: "b",
+        count: 2,
+        price: 20
+    },
+    {
+        name: "c",
+        count: 3,
+        price: 30
+    },
+    {
+        name: "d",
+        count: 1,
+        price: 40
+    },
+    {
+        name: "r",
+        count: 3,
+        price: 50
+    },
+    {
+        name: "f",
+        count: 2,
+        price: 60
+    },
+];
+function showCheque(product) {
+    var sumCheq = 0;
+    var sumProduct = 0;
+    var maxCheq = 0;
+    for (var index = 0; index < product.length; index++) {
+        var element = product[index];
+        sumProduct = element.price * element.count;
+        sumCheq = sumCheq + sumProduct;
+        console.log("<ul><li>" + element.name + "......." + element.count + "X" + element.price + "...sum:" + sumProduct + "</li></ul>");
+        if (sumProduct > maxCheq) {
+            maxCheq = sumProduct;
+        }
+    }
+    console.log(maxCheq);
+    // let maxCheq = Math.max(product.element);
+    console.log("\u041E\u0431\u0449\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u0432\u0430\u0448\u0438\u0445 \u043F\u043E\u043A\u0443\u043F\u043E\u043A " + sumCheq);
+}
+showCheque(cheque);
+// Задание 6
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-6 \uD83D\uDE42");
+/*Создать массив css-стилей (цвет, размер шрифта, выравнива-
+ние, подчеркивание и т. д.). Каждый элемент массива – это объ-
+ект, состоящий из двух свойств: название стиля и значение стиля.
+Написать функцию, которая принимает массив стилей и
+текст, и выводит этот текст с помощью document.write() в тегах
+<p></p>, добавив в открывающий тег атрибут style со всеми сти-
+лями, перечисленными в массиве.*/
+// const colorRed = [
+//   {
+//     name: "color",
+//     value: "red",
+//   },
+//   {
+//     name: "text-decoration",
+//     value: "underline",
+//   },
+// ];
+// const colorGreen = [
+//   {
+//     name: "color",
+//     value: "green",
+//   },
+//   {
+//     name: "font-size",
+//     value: "20px",
+//   },
+// ];
+// const printTextDiv = document.querySelector(".printText");
+// function printText(styleArr: Record<string, string>[], text: string) {
+//   let styleStr = "";
+//   for (let el of styleArr) {
+//     styleStr += `${el.name}:${el.value};`;
+//   }
+//   if (printTextDiv) {
+//     printTextDiv.innerHTML += `<p style="${styleStr}">${text}</p>`;
+//   }
+// }
+// printText(colorRed, "dfjkghjkdfgjhkdfgjkndfjkgnjkn sfgmlkdfnjglknjdflk");
+// printText(colorGreen, "dfjkghjkdfgjhkdfgjkndfjkgnjkn sfgmlkdfnjglknjdflk");
+// Задание 7
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-7 \uD83D\uDE42");
+/*Создать массив аудиторий академии. Объект-аудитория со-
+стоит из названия, количества посадочных мест (от 10 до 20) и
+названия факультета, для которого она предназначена.
+Написать несколько функций для работы с ним.
+1
+Вывод на экран всех аудиторий.
+2
+Вывод на экран аудиторий для указанного факультета.
+3
+Вывод на экран только тех аудиторий, которые подходят для
+переданной группы. Объект-группа состоит из названия,
+количества студентов и названия факультета.
+4
+Функция сортировки аудиторий по количеству мест.
+5
+Функция сортировки аудиторий по названию (по алфа-
+виту).*/
+// Задание 8
+console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-8 \uD83D\uDE42");
+// Написать функцию, которая принимает двузначное число
+// и возвращает его в текстовом виде.
+// Например: 35 – тридцать пять, 89 – восемьдесят девять, 12 – двенадцать.
+// function oneNumber(n: number) {
+//   switch (n) {
+//     case 0:
+//       return "ноль";
+//     case 1:
+//       return "один";
+//     case 2:
+//       return "два";
+//     case 3:
+//       return "три";
+//     case 4:
+//       return "четыре";
+//     case 5:
+//       return "пять";
+//     case 6:
+//       return "шесть";
+//     case 7:
+//       return "семь";
+//     case 8:
+//       return "восемь";
+//     case 9:
+//       return "девять";
+//   }
+// }
+// function secondOfTen(n: number) {
+//   switch (n) {
+//     case 0:
+//       return "десять";
+//     case 1:
+//       return "одиннадцать";
+//     case 2:
+//       return "двенадцать";
+//     case 3:
+//       return "тринадцать";
+//     case 4:
+//       return "четырнадцать";
+//     case 5:
+//       return "пятьнадцать";
+//     case 6:
+//       return "шестьнадцать";
+//     case 7:
+//       return "семьнадцать";
+//     case 8:
+//       return "восемьнадцать";
+//     case 9:
+//       return "девятьнадцать";
+//   }
+// }
+// function firstOfMoreTen(n: number) {
+//   switch (n) {
+//     case 2:
+//       return "двадцать";
+//     case 3:
+//       return "тридцать";
+//     case 4:
+//       return "сорок";
+//     case 5:
+//       return "пятьдесят";
+//     case 6:
+//       return "шестьдесят";
+//     case 7:
+//       return "семьдесят";
+//     case 8:
+//       return "восемьдесят";
+//     case 9:
+//       return "девяносто";
+//   }
+// }
+// function numberToText(n: number) {
+//   if (n < -99 || n > 99) return "Неверное число";
+//   let minusStr = "";
+//   let sN = "";
+//   const numberWithMinus = n.toString();
+//   if (numberWithMinus[0] == "-") {
+//     minusStr = "минус ";
+//     sN = numberWithMinus.slice(1);
+//   } else {
+//     sN = n.toString();
+//   }
+//   if (sN.length == 1) {
+//     return minusStr + oneNumber(+sN[0]);
+//   }
+//   if (sN.length == 2) {
+//     if (sN[0] == "1") {
+//       return minusStr + secondOfTen(+sN[1]);
+//     }
+//     if (sN[1] == "0") {
+//       return minusStr + firstOfMoreTen(+sN[0]);
+//     }
+//     return minusStr + firstOfMoreTen(+sN[0]) + " " + oneNumber(+sN[1]);
+//   }
+// }
+// alert(numberToText(+(prompt("введите двузначное число") as string)));
+// console.log(numberToText(18));
+// console.log(numberToText(0));
+// console.log(numberToText(9));
+// console.log(numberToText(34));
+// console.log(numberToText(68));
