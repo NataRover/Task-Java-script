@@ -315,8 +315,8 @@ function showCheque(product) {
             maxCheq = sumProduct;
         }
     }
-    console.log(maxCheq);
     // let maxCheq = Math.max(product.element);
+    console.log("\u0421\u0430\u043C\u0430\u044F \u0432\u044B\u0441\u043E\u043A\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430 \u0432 \u0447\u0435\u043A\u0435 " + maxCheq);
     console.log("\u041E\u0431\u0449\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u0432\u0430\u0448\u0438\u0445 \u043F\u043E\u043A\u0443\u043F\u043E\u043A " + sumCheq);
 }
 showCheque(cheque);
