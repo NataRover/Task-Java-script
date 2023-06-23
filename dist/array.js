@@ -379,6 +379,85 @@ console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-7 \uD83D\uDE42");
 5
 Функция сортировки аудиторий по названию (по алфа-
 виту).*/
+var academy = [
+    //аудитория
+    {
+        name: "22",
+        places: "15",
+        faculty: "web-developer"
+    },
+    //аудитория
+    {
+        name: "23",
+        places: "12",
+        faculty: "web-designer"
+    },
+    //аудитория
+    {
+        name: "29",
+        places: "5",
+        faculty: "web-designer"
+    },
+    {
+        name: "10",
+        places: "11",
+        faculty: "web-designer"
+    },
+    {
+        name: "20",
+        places: "15",
+        faculty: "Languages"
+    },
+    {
+        name: "26",
+        places: "14",
+        faculty: "Languages"
+    },
+    {
+        name: "33",
+        places: "18",
+        faculty: "Languages"
+    },
+];
+//вывод на экран всех аудиторий
+function showAcademy(classRoom) {
+    for (var index = 0; index < classRoom.length; index++) {
+        var element = classRoom[index];
+        console.log("<li>\u0433\u0440\u0443\u043F\u043F\u0430: " + element.name + ", \u0444\u0430\u043A\u0443\u043B\u044C\u0442\u0435\u0442: " + element.faculty + ", \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043C\u0435\u0441\u0442: " + element.places + "</li>");
+    }
+}
+showAcademy(academy);
+//Вывод на экран аудиторий для указанного факультета.
+function showFacultyRooms(obj, faculty) {
+    var facultyRooms = [];
+    for (var _i = 0, obj_1 = obj; _i < obj_1.length; _i++) {
+        var elem = obj_1[_i];
+        if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {
+            facultyRooms.push(elem.name);
+        }
+    }
+    return "\u0424\u0430\u043A\u0443\u043B\u044C\u0442\u0435\u0442 \"" + faculty + "\" \u0433\u0440\u0443\u043F\u043F\u0430: " + facultyRooms + ".";
+}
+console.log(showFacultyRooms(academy, "lanGuages"));
+console.log(showFacultyRooms(academy, "web-Designer"));
+//Вывод на экран только тех аудиторий, которые подходят для
+//переданной группы. Объект-группа состоит из названия,
+//количества студентов и названия факультета.
+function showAuditory(group, student, facultet) {
+}
+console.log(22, 15, "web-developer");
+//Функция сортировки аудиторий по количеству мест.
+function arrSortPlace(audit) {
+    audit.sort(function (a, b) { return a.places - b.places; });
+    return audit;
+}
+console.log(arrSortPlace(academy));
+//Функция сортировки аудиторий по названию (по алфавиту)
+function arrSortName(audit) {
+    audit.sort(function (a, b) { return a.faculty - b.faculty; });
+    return audit;
+}
+console.log(arrSortName(academy));
 // Задание 8
 console.log("\u0417\u0430\u0434\u0430\u043D\u0438\u0435-8 \uD83D\uDE42");
 // Написать функцию, которая принимает двузначное число

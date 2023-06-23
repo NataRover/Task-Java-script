@@ -408,6 +408,94 @@ console.log("Задание-7 \u{1F642}");
 Функция сортировки аудиторий по названию (по алфа-
 виту).*/
 
+const academy = [
+  //аудитория
+  {
+    name: "22",
+    places: "15",
+    faculty: "web-developer",
+  },
+  //аудитория
+  {
+    name: "23",
+    places: "12",
+    faculty: "web-designer",
+  },
+  //аудитория
+  {
+    name: "29",
+    places: "5",
+    faculty: "web-designer",
+  },
+  {
+    name: "10",
+    places: "11",
+    faculty: "web-designer",
+  },
+
+  {
+    name: "20",
+    places: "15",
+    faculty: "Languages",
+  },
+  {
+    name: "26",
+    places: "14",
+    faculty: "Languages",
+  },
+  {
+    name: "33",
+    places: "18",
+    faculty: "Languages",
+  },
+];
+//вывод на экран всех аудиторий
+function showAcademy(classRoom) {
+  for (let index = 0; index < classRoom.length; index++) {
+    const element = classRoom[index];
+    console.log(
+      `<li>группа: ${element.name}, факультет: ${element.faculty}, количество мест: ${element.places}</li>`
+    );
+  }
+}
+showAcademy(academy);
+//Вывод на экран аудиторий для указанного факультета.
+
+function showFacultyRooms(obj, faculty) {
+  let facultyRooms = [];
+
+  for (const elem of obj) {
+    if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {
+      facultyRooms.push(elem.name);
+    }
+  }
+  return `Факультет "${faculty}" группа: ${facultyRooms}.`;
+}
+console.log(showFacultyRooms(academy, "lanGuages"));
+console.log(showFacultyRooms(academy, "web-Designer"));
+
+//Вывод на экран только тех аудиторий, которые подходят для
+//переданной группы. Объект-группа состоит из названия,
+//количества студентов и названия факультета.
+function showAuditory(group, student, facultet) {
+  
+}
+console.log(22, 15, "web-developer");
+//Функция сортировки аудиторий по количеству мест.
+
+function arrSortPlace(audit) {
+  audit.sort((a, b) => a.places - b.places);
+  return audit;
+}
+console.log(arrSortPlace(academy));
+
+//Функция сортировки аудиторий по названию (по алфавиту)
+function arrSortName(audit) {
+  audit.sort((a, b) => a.faculty - b.faculty);
+  return audit;
+}
+console.log(arrSortName(academy));
+
 // Задание 8
 console.log("Задание-8 \u{1F642}");
 // Написать функцию, которая принимает двузначное число
