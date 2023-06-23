@@ -337,7 +337,6 @@ function showCheque(product) {
       maxCheq = sumProduct;
     }
   }
-    // let maxCheq = Math.max(product.element);
   console.log(`Самая высокая покупка в чеке ${maxCheq}`);
   console.log(`Общая сумма ваших покупок ${sumCheq}`);
 }
