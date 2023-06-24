@@ -477,10 +477,17 @@ console.log(showFacultyRooms(academy, "web-Designer"));
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
-function showAuditory(group, student, facultet) {
-  
+function showAuditory(obj, groupName) {
+  let groupRooms = [];
+
+  for (const elem of obj) {
+    if (elem.groupName === groupName) {
+      groupRooms.push(elem.)
+    }
+  }
+  return `Группа ${groupName} - ${groupRooms}`;
 }
-console.log(22, 15, "web-developer");
+console.log(academy, 22);
 //Функция сортировки аудиторий по количеству мест.
 
 function arrSortPlace(audit) {
