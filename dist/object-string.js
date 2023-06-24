@@ -815,9 +815,82 @@ console.log("Hello friend! Task-21(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\
 function initSnake(str) {
     // Заменяем все заглавные буквы символом подчеркивания (_), а затем строчными буквами
     var new_str = str.replace(/[A-Z]/g, function (letter) {
-        return '_' + letter.toLowerCase();
+        return "_" + letter.toLowerCase();
     });
     // Удаляем символ подчеркивания (_) в начале строки
     return new_str.replace(/^_/, "");
 }
 console.log(initSnake("HelloWorld")); // hello_world
+//ЗАДАЧА-22
+console.log("Hello friend! Task-22(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая принимает строку и выводит
+// статистику о ней: количество букв, количество цифр и
+// количество других знаков.
+var myStr = " dfgdfg 3453534 ';'.x';arrSortPlace[qdlpk/xz>sdl'q;]";
+function statStr(str) {
+    str = str.toLowerCase();
+    console.log(str.length);
+    var res = { letter: 0, number: 0, symbol: 0 };
+    for (var _i = 0, str_2 = str; _i < str_2.length; _i++) {
+        var symbol = str_2[_i];
+        if (symbol >= "a" && symbol <= "z") {
+            ++res.letter;
+        }
+        else if (symbol >= "0" && symbol <= "9") {
+            ++res.number;
+        }
+        else {
+            ++res.symbol;
+        }
+    }
+    return res;
+}
+console.log(statStr(myStr));
+var mainString = "Your Big String";
+//ЗАДАЧА-23
+console.log("Hello friend! Task-23(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая преобразует названия css-
+// стилей с дефисом в название в СamelСase стиле: font-size
+// в fontSize, background-color в backgroundColor, text-
+// align в textAlign.
+//ЗАДАЧА-24
+console.log("Hello friend! Task-24(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая принимает словосочетание
+// и превращает его в аббревиатуру.
+// Например: cascading style sheets в CSS, объектно-
+// ориентированное программирование в ООП.
+//ЗАДАЧА-25
+console.log("Hello friend! Task-25(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая принимает любое коли-
+// чество строк, объединяет их в одну длинную строку и
+// возвращает ее.
+//ЗАДАЧА-26
+console.log("Hello friend! Task-26(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию – калькулятор. Функция принимает
+// строку с примером, определяет, какое действие необходимо
+// выполнить (+ - * /), переводит операнды в числа, решает
+// пример и возвращает результат.
+//ЗАДАЧА-27
+console.log("Hello friend! Task-27(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая получает url и выводит под-
+// робную информацию о нем.
+// Например: url “https://itstep.org/ua/about”, информация
+// “протокол: https, домен: itstep.org, путь: /ua/about”.
+//ЗАДАЧА-28
+console.log("Hello friend! Task-28(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию, которая принимает строку и раздели-
+// тель и возвращает массив подстрок, разбитых с помощью
+// указанного разделителя.
+// Например: строка “10/08/2020”, разделитель “/”, результат:
+// “10”, “08”, “2020”.
+// Выполняя задание, не используйте функцию split().
+//ЗАДАЧА-29
+console.log("Hello friend! Task-29(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+// Написать функцию вывода текста по заданному шаблону.
+// Функция принимает первым параметром шаблон, в тексте
+// которого может использоваться %, после символа % ука-
+// зывается индекс входного параметра. При выводе вместо
+// %индекс необходимо вывести значение соответствующего
+// входного параметра.
+// Например: print(“Today is %1 %2.%3.%4”, “Monday”, 10,
+// 8, 2020) должна вывести “Today is Monday 10.8.2020”.
