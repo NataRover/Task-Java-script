@@ -449,6 +449,12 @@ const academy = [
     faculty: "Languages",
   },
 ];
+
+const group = {
+  name: "SW-2019",
+  count: "25",
+  faculty: "Software",
+  };
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
   for (let index = 0; index < classRoom.length; index++) {
@@ -461,10 +467,10 @@ function showAcademy(classRoom) {
 showAcademy(academy);
 //Вывод на экран аудиторий для указанного факультета.
 
-function showFacultyRooms(obj, faculty) {
+function showFacultyRooms(arr, faculty) {
   let facultyRooms = [];
 
-  for (const elem of obj) {
+  for (const elem of arr) {
     if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {
       facultyRooms.push(elem.name);
     }
@@ -477,15 +483,14 @@ console.log(showFacultyRooms(academy, "web-Designer"));
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
-function showAuditory(obj, groupName) {
+function showAuditory(arr, groupName) {
   let groupRooms = [];
 
-  for (const elem of obj) {
-    if (elem.groupName === groupName) {
-      groupRooms.push(elem.)
-    }
+  for (const elem of arr) {
+  
   }
-  return `Группа ${groupName} - ${groupRooms}`;
+
+  return ``;
 }
 console.log(academy, 22);
 //Функция сортировки аудиторий по количеству мест.

@@ -419,6 +419,11 @@ var academy = [
         faculty: "Languages"
     },
 ];
+var group = {
+    name: "SW-2019",
+    count: "25",
+    faculty: "Software"
+};
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
     for (var index = 0; index < classRoom.length; index++) {
@@ -428,10 +433,10 @@ function showAcademy(classRoom) {
 }
 showAcademy(academy);
 //Вывод на экран аудиторий для указанного факультета.
-function showFacultyRooms(obj, faculty) {
+function showFacultyRooms(arr, faculty) {
     var facultyRooms = [];
-    for (var _i = 0, obj_1 = obj; _i < obj_1.length; _i++) {
-        var elem = obj_1[_i];
+    for (var _i = 0, arr_6 = arr; _i < arr_6.length; _i++) {
+        var elem = arr_6[_i];
         if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {
             facultyRooms.push(elem.name);
         }
@@ -443,15 +448,12 @@ console.log(showFacultyRooms(academy, "web-Designer"));
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
-function showAuditory(obj, groupName) {
+function showAuditory(arr, groupName) {
     var groupRooms = [];
-    for (var _i = 0, obj_2 = obj; _i < obj_2.length; _i++) {
-        var elem = obj_2[_i];
-        if (elem.groupName === groupName) {
-            groupRooms.push(elem.);
-        }
+    for (var _i = 0, arr_7 = arr; _i < arr_7.length; _i++) {
+        var elem = arr_7[_i];
     }
-    return "\u0413\u0440\u0443\u043F\u043F\u0430 " + groupName + " - " + groupRooms;
+    return "";
 }
 console.log(academy, 22);
 //Функция сортировки аудиторий по количеству мест.
