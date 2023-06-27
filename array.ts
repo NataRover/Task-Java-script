@@ -325,22 +325,28 @@ const cheque = [
 function showCheque(product) {
   let sumCheq = 0;
   let sumProduct = 0;
-  let maxCheq = 0;
+  let maxCheq = { name: '', price: 0, count: 0 };
+  let sumPrice = 0
   for (let index = 0; index < product.length; index++) {
     const element = product[index];
     sumProduct = element.price * element.count;
     sumCheq = sumCheq + sumProduct;
     console.log(
-      `<ul><li>${element.name}.......${element.count}X${element.price}...sum:${sumProduct}</li></ul>`
+      `<li>${element.name}.......${element.count}X${element.price}...sum:${sumProduct}</li>`
     );
-    if (sumProduct > maxCheq) {
-      maxCheq = sumProduct;
+    sumPrice += element.price
+    if (sumProduct > maxCheq.price * maxCheq.count) {
+      maxCheq = element;
     }
   }
+
+  console.log(`Самая дорогая покупка в чеке ${maxCheq.name} на сумму ${maxCheq.price * maxCheq.count}`);
   console.log(`Самая высокая покупка в чеке ${maxCheq}`);
   console.log(`Общая сумма ваших покупок ${sumCheq}`);
+  console.log(`Средняя стоимость одного товара ${sumPrice / product.length}`);
 }
 showCheque(cheque);
+
 
 // Задание 6
 console.log("Задание-6 \u{1F642}");
@@ -463,8 +469,8 @@ function showAcademy(classRoom) {
 showAcademy(academy);
 //Вывод на экран аудиторий для указанного факультета.
 
-function showFacultyRooms(arr, faculty) {
-  let facultyRooms = [];
+function showFacultyRooms(arr: any[], faculty:string) {
+  let facultyRooms = [] as any;
 
   for (const elem of arr) {
     if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {
@@ -476,19 +482,25 @@ function showFacultyRooms(arr, faculty) {
 console.log(showFacultyRooms(academy, "lanGuages"));
 console.log(showFacultyRooms(academy, "web-Designer"));
 
+const group = {
+  name: 'sdfsd',
+  count: 6,
+  faculty: "web-designer",
+}
+
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
-function showAuditory(arr, groupName) {
-  let groupRooms = [];
-
-  for (const elem of arr) {
-  
-  }
-
-  return ``;
+function showAuditory(arr:any[], group:any) {
+  let auditories = [] as any
+  for (let elem of arr) {
+    if (elem.places >= group.count && elem.faculty.toLowerCase() === group.faculty.toLowerCase()) {
+      auditories.push(elem)
+    }
+  }  
+  return auditories;
 }
-console.log(academy, 22);
+console.log('auditories',showAuditory(academy,group));
 //Функция сортировки аудиторий по количеству мест.
 
 function arrSortPlace(audit) {

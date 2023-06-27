@@ -305,18 +305,22 @@ var cheque = [
 function showCheque(product) {
     var sumCheq = 0;
     var sumProduct = 0;
-    var maxCheq = 0;
+    var maxCheq = { name: '', price: 0, count: 0 };
+    var sumPrice = 0;
     for (var index = 0; index < product.length; index++) {
         var element = product[index];
         sumProduct = element.price * element.count;
         sumCheq = sumCheq + sumProduct;
-        console.log("<ul><li>" + element.name + "......." + element.count + "X" + element.price + "...sum:" + sumProduct + "</li></ul>");
-        if (sumProduct > maxCheq) {
-            maxCheq = sumProduct;
+        console.log("<li>" + element.name + "......." + element.count + "X" + element.price + "...sum:" + sumProduct + "</li>");
+        sumPrice += element.price;
+        if (sumProduct > maxCheq.price * maxCheq.count) {
+            maxCheq = element;
         }
     }
+    console.log("\u0421\u0430\u043C\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430 \u0432 \u0447\u0435\u043A\u0435 " + maxCheq.name + " \u043D\u0430 \u0441\u0443\u043C\u043C\u0443 " + maxCheq.price * maxCheq.count);
     console.log("\u0421\u0430\u043C\u0430\u044F \u0432\u044B\u0441\u043E\u043A\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430 \u0432 \u0447\u0435\u043A\u0435 " + maxCheq);
     console.log("\u041E\u0431\u0449\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u0432\u0430\u0448\u0438\u0445 \u043F\u043E\u043A\u0443\u043F\u043E\u043A " + sumCheq);
+    console.log("\u0421\u0440\u0435\u0434\u043D\u044F\u044F \u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C \u043E\u0434\u043D\u043E\u0433\u043E \u0442\u043E\u0432\u0430\u0440\u0430 " + sumPrice / product.length);
 }
 showCheque(cheque);
 // Задание 6
@@ -419,11 +423,6 @@ var academy = [
         faculty: "Languages"
     },
 ];
-var group = {
-    name: "SW-2019",
-    count: "25",
-    faculty: "Software"
-};
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
     for (var index = 0; index < classRoom.length; index++) {
@@ -445,17 +444,25 @@ function showFacultyRooms(arr, faculty) {
 }
 console.log(showFacultyRooms(academy, "lanGuages"));
 console.log(showFacultyRooms(academy, "web-Designer"));
+var group = {
+    name: 'sdfsd',
+    count: 6,
+    faculty: "web-designer"
+};
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
-function showAuditory(arr, groupName) {
-    var groupRooms = [];
+function showAuditory(arr, group) {
+    var auditories = [];
     for (var _i = 0, arr_7 = arr; _i < arr_7.length; _i++) {
         var elem = arr_7[_i];
+        if (elem.places >= group.count && elem.faculty.toLowerCase() === group.faculty.toLowerCase()) {
+            auditories.push(elem);
+        }
     }
-    return "";
+    return auditories;
 }
-console.log(academy, 22);
+console.log('auditories', showAuditory(academy, group));
 //Функция сортировки аудиторий по количеству мест.
 function arrSortPlace(audit) {
     audit.sort(function (a, b) { return a.places - b.places; });
