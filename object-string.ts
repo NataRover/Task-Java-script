@@ -942,7 +942,7 @@ function statStr(str) {
 }
 console.log(statStr(myStr));
 
-const mainString = "Your Big String";
+// const mainString = "Your Big String";
 
 //ЗАДАЧА-23
 console.log("Hello friend! Task-23(строки) \u{1F642}");

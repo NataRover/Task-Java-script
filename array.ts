@@ -450,11 +450,7 @@ const academy = [
   },
 ];
 
-const group = {
-  name: "SW-2019",
-  count: "25",
-  faculty: "Software",
-  };
+
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
   for (let index = 0; index < classRoom.length; index++) {
