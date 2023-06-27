@@ -2398,14 +2398,14 @@
                                 if (!el.purchased) {<br>
                                 console.log(`${n}. ${el.name} Надо купить ${el.count} штук`);<br>
                                 n++;<br>
-                                // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")<br>
+                               console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")<br>
                                 }<br>
                                 }<br>
                                 for (let el of arr) {<br>
                                 if (el.purchased) {<br>
                                 console.log(`${n}. ${el.name} Куплено ${el.count} штук`);<br>
                                 n++;<br>
-                                // console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")<br>
+                               console.log(n + ". " +el.name+" Надо купить "+el.cont+"штук")<br>
                                 }<br>
                                 }<br>
                                 }<br>
@@ -2444,55 +2444,19 @@
                         </div>
                     </div>
                 </div>
-                <!-- <h3 class="mt-5">Задание 12</h3>
-                <p>Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара,
-                    количества и цены за
-                    единицу товара. Написать следующие функции.</p>
+                <h3 class="mt-5">Задание 12</h3>
+                <p>Создать массив css-стилей (цвет, размер шрифта, выравнива-
+                    ние, подчеркивание и т. д.). Каждый элемент массива – это объект, состоящий из двух свойств:
+                    название стиля и значение стиля.</p>
                 <div
                     class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
-                    const cheque = [<br>
-                    {<br>
-                    name: "a",<br>
-                    count: 1,<br>
-                    price: 10,<br>
-                    },<br>
-                    {<br>
-                    name: "b",<br>
-                    count: 2,<br>
-                    price: 20,<br>
-                    },<br>
-                    {<br>
-                    name: "c",<br>
-                    count: 3,<br>
-                    price: 30,<br>
-                    },<br>
-                    {<br>
-                    name: "d",<br>
-                    count: 1,<br>
-                    price: 40,<br>
-                    },<br>
-                    {<br>
-                    name: "r",<br>
-                    count: 3,<br>
-                    price: 50,<br>
-                    },<br>
-                    {<br>
-                    name: "f",<br>
-                    count: 2,<br>
-                    price: 60,<br>
-                    },<br>
-                    ];<br>
+
                 </div>
                 <p
                     class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-                    1.
-                    Распечатка чека на экран.<br>
-                    2.
-                    Подсчет общей суммы покупки.<br>
-                    3.
-                    Получение самой дорогой покупки в чеке.<br>
-                    4.
-                    Подсчет средней стоимости одного товара в чеке.<br>
+                    Написать функцию, которая принимает массив стилей и
+                    текст, и выводит этот текст с помощью document.write() в тегах
+                    "p", добавив в открывающий тег атрибут style со всеми стилями, перечисленными в массиве.
                 </p>
                 <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
                 <div class="accordion" id="accordionExample12">
@@ -2506,12 +2470,47 @@
                         <div id="collapseOne12" class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample12">
                             <div class="accordion-body">
-                                <p class="bg-warning d-inline px-1">1.</p><br>
-                                <img src="img/2023-06-23_20-31-50.png" alt="">
+                                <p class="bg-warning d-inline px-1">1.</p>
+                                 const colorRed = [<br>
+                                 {<br>
+                                   name: "color",<br>
+                                   value: "red",<br>
+                                 },<br>
+                                 {<br>
+                                   name: "text-decoration",<br>
+                                   value: "underline",<br>
+                                 },<br>
+                               ];<br>
+                               const colorGreen = [<br>
+                                 {<br>
+                                   name: "color",<br>
+                                   value: "green",<br>
+                                 },<br>
+                                 {<br>
+                                   name: "font-size",<br>
+                                   value: "20px",<br>
+                                 },<br>
+                               ];<br>
+                                
+                               const printTextDiv = document.querySelector(".printText");<br>
+                                
+                               function printText(styleArr, text) {<br>
+                                 let styleStr = "";<br>
+                                 for (let el of styleArr) {<br>
+                                   styleStr += `${el.name}:${el.value};`;<br>
+                                 }<br>
+                                 if (printTextDiv) {<br>
+                                   printTextDiv.innerHTML += `<p style="${styleStr}">${text}</p>`;<br>
+                                 }<br>
+                               }<br>
+                                
+                               printText(colorRed, "every hunter wishes to know");<br>
+                               printText(colorGreen, "every hunter wishes to know");<br><br>
+                                
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
             <!-- циклы-->
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
