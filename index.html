@@ -2497,10 +2497,10 @@
                                function printText(styleArr, text) {<br>
                                  let styleStr = "";<br>
                                  for (let el of styleArr) {<br>
-                                   styleStr += `${el.name}:${el.value};`;<br>
+                                   styleStr += `${el.name}:${el.value}`;<br>
                                  }<br>
                                  if (printTextDiv) {<br>
-                                   printTextDiv.innerHTML += `<p style="${styleStr}">${text}</p>`;<br>
+                                   printTextDiv.innerHTML += `p style="${styleStr}">${text} p`;<br>
                                  }<br>
                                }<br>
                                 
