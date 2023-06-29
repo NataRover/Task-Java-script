@@ -345,7 +345,6 @@ function showCheque(product) {
       maxCheq.price * maxCheq.count
     }`
   );
-  console.log(`Самая высокая покупка в чеке ${maxCheq}`);
   console.log(`Общая сумма ваших покупок ${sumCheq}`);
   console.log(`Средняя стоимость одного товара ${sumPrice / product.length}`);
 }
