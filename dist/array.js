@@ -305,7 +305,7 @@ var cheque = [
 function showCheque(product) {
     var sumCheq = 0;
     var sumProduct = 0;
-    var maxCheq = { name: '', price: 0, count: 0 };
+    var maxCheq = { name: "", price: 0, count: 0 };
     var sumPrice = 0;
     for (var index = 0; index < product.length; index++) {
         var element = product[index];
@@ -423,6 +423,11 @@ var academy = [
         faculty: "Languages"
     },
 ];
+var group = {
+    name: "sdfsd",
+    count: 6,
+    faculty: "web-designer"
+};
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
     for (var index = 0; index < classRoom.length; index++) {
@@ -444,11 +449,6 @@ function showFacultyRooms(arr, faculty) {
 }
 console.log(showFacultyRooms(academy, "lanGuages"));
 console.log(showFacultyRooms(academy, "web-Designer"));
-var group = {
-    name: 'sdfsd',
-    count: 6,
-    faculty: "web-designer"
-};
 //Вывод на экран только тех аудиторий, которые подходят для
 //переданной группы. Объект-группа состоит из названия,
 //количества студентов и названия факультета.
@@ -456,13 +456,14 @@ function showAuditory(arr, group) {
     var auditories = [];
     for (var _i = 0, arr_7 = arr; _i < arr_7.length; _i++) {
         var elem = arr_7[_i];
-        if (elem.places >= group.count && elem.faculty.toLowerCase() === group.faculty.toLowerCase()) {
+        if (elem.places >= group.count &&
+            elem.faculty.toLowerCase() === group.faculty.toLowerCase()) {
             auditories.push(elem);
         }
     }
     return auditories;
 }
-console.log('auditories', showAuditory(academy, group));
+console.log("auditories", showAuditory(academy, group));
 //Функция сортировки аудиторий по количеству мест.
 function arrSortPlace(audit) {
     audit.sort(function (a, b) { return a.places - b.places; });
