@@ -220,7 +220,7 @@
                     </div>
                     <p
                         class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
-                        Получите из объекта obj значение id в констанду id не используя выражение
+                        Получите из объекта obj значение id в константу id не используя выражение
                         obj.id</p>
                     <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
                     <div class="accordion" id="accordionExample5">
@@ -2712,9 +2712,145 @@
                                 price: 60,<br>
                                 },<br>
                                 ];<br>
-                                <div class="" style="overflow-x: scroll; width: 800px;">
+                                <div class="" style="overflow-x: scroll; max-width: 800px;">
                                     <img src="img/2023-06-27_17-58-36.png" alt="">
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15 -->
+                <h3 class="mt-5">Задание 15</h3>
+                <p>Создать массив аудиторий академии. Объект-аудитория со-
+                    стоит из названия, количества посадочных мест (от 10 до 20) и
+                    названия факультета, для которого она предназначена.</p>
+                <div
+                    class="border border-secondary border-top-0 border-bottom-0 border-end-0 border-3 p-3 bg-success bg-opacity-25">
+
+                </div>
+                <p
+                    class="my-3 bg-warning-subtle p-3 border border-warning border-top-0 border-bottom-0 border-end-0 border-2">
+                    Написать следующие функции.<br>
+                    1.Вывод на экран всех аудиторий.<br>
+                    2.Вывод на экран аудиторий для указанного факультета.<br>
+                    3.Вывод на экран только тех аудиторий, которые подходят для
+                    переданной группы. Объект-группа состоит из названия,
+                    количества студентов и названия факультета.<br>
+                    4.Функция сортировки аудиторий по количеству мест.<br>
+                    5.Функция сортировки аудиторий по названию (по алфа-
+                    виту).<br>
+                </p>
+                <button type="button" class="btn btn-secondary mb-5">Добавить ответ</button>
+                <div class="accordion" id="accordionExample15">
+                    <div class="accordion-item border-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne15" aria-expanded="true" aria-controls="collapseOne15">
+                                Решение
+                            </button>
+                        </h2>
+                        <div id="collapseOne15" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample15">
+                            <div class="accordion-body">
+                                <p class="bg-warning d-inline px-1">1.</p>
+                                const academy = [<br>
+                                {<br>
+                                name: "22",<br>
+                                places: "15",<br>
+                                faculty: "web-developer",<br>
+                                },<br>
+                                {<br>
+                                name: "23",<br>
+                                places: "12",<br>
+                                faculty: "web-designer",<br>
+                                },<br>
+                                {<br>
+                                name: "29",<br>
+                                places: "5",<br>
+                                faculty: "web-designer",<br>
+                                },<br>
+                                {<br>
+                                name: "10",<br>
+                                places: "11",<br>
+                                faculty: "web-designer",<br>
+                                },<br>
+                                {<br>
+                                name: "20",<br>
+                                places: "15",<br>
+                                faculty: "Languages",<br>
+                                },<br>
+                                {<br>
+                                name: "26",<br>
+                                places: "14",<br>
+                                faculty: "Languages",<br>
+                                },<br>
+                                {<br>
+                                name: "33",<br>
+                                places: "18",<br>
+                                faculty: "Languages",<br>
+                                },<br>
+                                ]
+                                <p class="bg-warning-subtle p-1">вывод на экран всех аудиторий</p>
+                                function showAcademy(classRoom) {<br>
+                                for (let index = 0; index < classRoom.length; index++) { const element=classRoom[index];
+                                    console.log( `li группа: ${element.name}, факультет: ${element.faculty}, количество
+                                    мест: ${element.places} li` );<br>
+                                    }<br>
+                                    }<br>
+                                    showAcademy(academy);<br><br>
+                                    <p class="bg-warning-subtle p-1">Вывод на экран аудиторий для указанного факультета.
+                                    </p>
+                                    function showFacultyRooms(arr , faculty) {<br>
+                                    let facultyRooms = [];<br>
+
+                                    for (const elem of arr) {<br>
+                                    if (elem.faculty.toLowerCase() === faculty.toLowerCase()) {<br>
+                                    facultyRooms.push(elem.name);<br>
+                                    }<br>
+                                    }<br>
+                                    return `Факультет "${faculty}" группа: ${facultyRooms}.`;<br>
+                                    }<br>
+                                    console.log(showFacultyRooms(academy, "lanGuages"));<br>
+                                    console.log(showFacultyRooms(academy, "web-Designer"));<br><br>
+                                    <p class="bg-warning-subtle p-1"> Вывод на экран только тех аудиторий, которые
+                                        подходят для
+                                        переданной группы. Объект-группа состоит из названия,
+                                        количества студентов и названия факультета.</p>
+                                    const group = {<br>
+                                    name: "sdfsd",<br>
+                                    count: 6,<br>
+                                    faculty: "web-designer",<br>
+                                    };<br>
+                                    function showAuditory(arr: , group:) {<br>
+                                    let auditories = [] ;<br>
+                                    for (let elem of arr) {<br>
+                                    if (<br>
+                                    elem.places >= group.count &&<br>
+                                    elem.faculty.toLowerCase() === group.faculty.toLowerCase()<br>
+                                    ) {<br>
+                                    auditories.push(elem);<br>
+                                    }<br>
+                                    }<br>
+                                    return auditories;<br>
+                                    }<br>
+                                    console.log("auditories", showAuditory(academy, group));<br><br>
+                                    <p class="bg-warning-subtle p-1"> Функция сортировки аудиторий по количеству мест.
+                                    </p>
+
+                                    function arrSortPlace(audit) {<br>
+                                    audit.sort((a, b) => a.places - b.places);<br>
+                                    return audit;<br>
+                                    }<br>
+                                    console.log(arrSortPlace(academy));<br><br>
+                                    <p class="bg-warning-subtle p-1">Функция сортировки аудиторий по названию (по
+                                        алфавиту)
+                                    </p>
+
+                                    function arrSortName(audit) {<br>
+                                    audit.sort((a, b) => a.faculty - b.faculty);<br>
+                                    return audit;<br>
+                                    }<br>
+                                    console.log(arrSortName(academy));<br><br>
                             </div>
                         </div>
                     </div>
