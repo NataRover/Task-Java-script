@@ -456,7 +456,6 @@ const academy = [
   },
 ];
 
-
 //вывод на экран всех аудиторий
 function showAcademy(classRoom) {
   for (let index = 0; index < classRoom.length; index++) {
