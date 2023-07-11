@@ -846,9 +846,14 @@ function statStr(str) {
     return res;
 }
 console.log(statStr(myStr));
-var mainString = "Your Big String";
+// const mainString = "Your Big String";
 //ЗАДАЧА-23
 console.log("Hello friend! Task-23(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
+function toCamelCase(str) {
+    var arr = str.split('-');
+    return arr.reduce(function (acc, el, i) { return acc += i == 0 ? el : el[0].toUpperCase() + el.slice(1); });
+}
+console.log(toCamelCase('background-color'));
 // Написать функцию, которая преобразует названия css-
 // стилей с дефисом в название в СamelСase стиле: font-size
 // в fontSize, background-color в backgroundColor, text-
@@ -894,3 +899,27 @@ console.log("Hello friend! Task-29(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\
 // входного параметра.
 // Например: print(“Today is %1 %2.%3.%4”, “Monday”, 10,
 // 8, 2020) должна вывести “Today is Monday 10.8.2020”.
+function print(tempalte) {
+    var args = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        args[_i - 1] = arguments[_i];
+    }
+    var str = '';
+    for (var i = 0; i < tempalte.length; i++) {
+        if (tempalte[i] != '%') {
+            str += tempalte[i];
+        }
+        else {
+            if (!Number.isNaN(+tempalte[i + 1])) {
+                str += arguments[tempalte[i + 1]];
+            }
+            else {
+                str += tempalte[i];
+                str += tempalte[i + 1];
+            }
+            i++;
+        }
+    }
+    return str;
+}
+console.log(print('Today is %1 %2.%3.%4 %5', 'Monday', 10, 8, 2020, '!!!!()!!!!'));
