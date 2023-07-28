@@ -846,18 +846,17 @@ function statStr(str) {
     return res;
 }
 console.log(statStr(myStr));
-// const mainString = "Your Big String";
 //ЗАДАЧА-23
 console.log("Hello friend! Task-23(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
-function toCamelCase(str) {
-    var arr = str.split('-');
-    return arr.reduce(function (acc, el, i) { return acc += i == 0 ? el : el[0].toUpperCase() + el.slice(1); });
-}
-console.log(toCamelCase('background-color'));
 // Написать функцию, которая преобразует названия css-
 // стилей с дефисом в название в СamelСase стиле: font-size
 // в fontSize, background-color в backgroundColor, text-
 // align в textAlign.
+function toCamelCase(str) {
+    var arr = str.split("-");
+    return arr.reduce(function (acc, el, i) { return (acc += i == 0 ? el : el[0].toUpperCase() + el.slice(1)); });
+}
+console.log(toCamelCase("background-color"));
 //ЗАДАЧА-24
 console.log("Hello friend! Task-24(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 // Написать функцию, которая принимает словосочетание
@@ -904,9 +903,9 @@ function print(tempalte) {
     for (var _i = 1; _i < arguments.length; _i++) {
         args[_i - 1] = arguments[_i];
     }
-    var str = '';
+    var str = "";
     for (var i = 0; i < tempalte.length; i++) {
-        if (tempalte[i] != '%') {
+        if (tempalte[i] != "%") {
             str += tempalte[i];
         }
         else {
@@ -922,4 +921,4 @@ function print(tempalte) {
     }
     return str;
 }
-console.log(print('Today is %1 %2.%3.%4 %5', 'Monday', 10, 8, 2020, '!!!!()!!!!'));
+console.log(print("Today is %1 %2.%3.%4 %5", "Monday", 10, 8, 2020, "!!!!()!!!!"));

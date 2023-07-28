@@ -942,20 +942,20 @@ function statStr(str) {
 }
 console.log(statStr(myStr));
 
-// const mainString = "Your Big String";
-
 //ЗАДАЧА-23
 console.log("Hello friend! Task-23(строки) \u{1F642}");
-function toCamelCase(str:string) {
-  const arr = str.split('-')
-  return arr.reduce((acc, el, i) => acc+= i==0 ? el : el[0].toUpperCase()+el.slice(1))
-}
-
-console.log(toCamelCase('background-color'))
 // Написать функцию, которая преобразует названия css-
 // стилей с дефисом в название в СamelСase стиле: font-size
 // в fontSize, background-color в backgroundColor, text-
 // align в textAlign.
+
+function toCamelCase(str: string) {
+  const arr = str.split("-");
+  return arr.reduce(
+    (acc, el, i) => (acc += i == 0 ? el : el[0].toUpperCase() + el.slice(1))
+  );
+}
+console.log(toCamelCase("background-color"));
 
 //ЗАДАЧА-24
 console.log("Hello friend! Task-24(строки) \u{1F642}");
@@ -1004,22 +1004,24 @@ console.log("Hello friend! Task-29(строки) \u{1F642}");
 // Например: print(“Today is %1 %2.%3.%4”, “Monday”, 10,
 // 8, 2020) должна вывести “Today is Monday 10.8.2020”.
 
-function print(tempalte:string, ...args:any[]) {
-  let str = ''
-  for(let i=0; i<tempalte.length;i++) {
-    if (tempalte[i]!='%') {
-      str+=tempalte[i]
+function print(tempalte: string, ...args: any[]) {
+  let str = "";
+  for (let i = 0; i < tempalte.length; i++) {
+    if (tempalte[i] != "%") {
+      str += tempalte[i];
     } else {
-      if (!Number.isNaN(+tempalte[i+1])) {
-        str+=arguments[tempalte[i+1]]
+      if (!Number.isNaN(+tempalte[i + 1])) {
+        str += arguments[tempalte[i + 1]];
       } else {
-        str+=tempalte[i]
-        str+=tempalte[i+1]  
+        str += tempalte[i];
+        str += tempalte[i + 1];
       }
-      i++
+      i++;
     }
   }
-  return str
+  return str;
 }
 
-console.log(print('Today is %1 %2.%3.%4 %5', 'Monday', 10, 8, 2020, '!!!!()!!!!'))
+console.log(
+  print("Today is %1 %2.%3.%4 %5", "Monday", 10, 8, 2020, "!!!!()!!!!")
+);
