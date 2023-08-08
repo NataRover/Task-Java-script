@@ -1,5 +1,7 @@
 //ОБЪЕКТЫ
-console.log("Hello friend! Task-1 \uD83D\uDE42");
+// const chalk = require("chalk");
+// console.log(chalk.green("Hello friend! Task-1 \u{1F642}(Объекты)"));
+console.log("Hello friend! Task-1 \uD83D\uDE42(\u041E\u0431\u044A\u0435\u043A\u0442\u044B)");
 // ЗАДАНИЕ 1
 //У нас есть следующий объект:
 //Проверьте, что этот объект не пустой и что в нем есть ключ age.
@@ -469,6 +471,9 @@ list.printList();
 console.log(list.values);
 list.values = ["Java script", "C#", "HTML", "PHP"];
 console.log(list.values);
+// ОБЪЕКТ DATE
+// ЗАДАЧА-17
+console.log("Hello friend! Task-17 \uD83D\uDE42");
 //СТРОКИ
 console.log("Hello friend! Task-1(\u0441\u0442\u0440\u043E\u043A\u0438) \uD83D\uDE42");
 //ЗАДАЧА-1
